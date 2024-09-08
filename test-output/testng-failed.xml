@@ -7,7 +7,7 @@
         <methods>
           <include name="launchBrowser"/>
           <include name="loadConfig"/>
-          <include name="empSearchByStatus"/>
+          <include name="addEmployee"/>
         </methods>
       </class> <!-- com.orengeHRM.testcases.EmployeePageTest -->
     </classes>

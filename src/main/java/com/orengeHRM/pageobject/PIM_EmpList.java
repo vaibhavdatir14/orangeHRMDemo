@@ -6,15 +6,20 @@
 
 package com.orengeHRM.pageobject;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 
 import com.orengeHRM.actiondriver.Action;
 import com.orengeHRM.base.BaseClass;
 
 public class PIM_EmpList extends BaseClass {
+
+	PIM_EmpList emplist;
 
 	@FindBy(xpath = "//button[@type='reset']")
 	WebElement ResetButton;
@@ -32,13 +37,13 @@ public class PIM_EmpList extends BaseClass {
 	@FindBy(xpath = "//*[@type='submit']")
 	WebElement SearchButton;
 
-	@FindBy(xpath = "//*[@class='oxd-table-row oxd-table-row--with-border']")
-	WebElement TableRowCount;
+	@FindBy(xpath = "//*[@class='oxd-table-card']/div")
+	List<WebElement> TableRowCount;
 
-	@FindBy(xpath = "//*[@class='oxd-table-row oxd-table-row--with-border']/div")
-	WebElement TablecolCount;
+	@FindBy(xpath = "//*[@class='oxd-table-card'][1]/div/div")
+	List<WebElement> TableColCount;
 
-	@FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
+	@FindBy(xpath = "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")
 	WebElement EnterIDinSearch;
 
 	@FindBy(xpath = "//*[@class='oxd-select-text oxd-select-text--active'][@xpath='1']")
@@ -59,8 +64,8 @@ public class PIM_EmpList extends BaseClass {
 	@FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
 	WebElement AddEmpButton;
 
-	//Page factory method initialization
-	
+	// Page factory method initialization
+
 	public PIM_EmpList() {
 
 		PageFactory.initElements(driver, this);
@@ -68,7 +73,7 @@ public class PIM_EmpList extends BaseClass {
 	}
 
 	// Entering some data in the Name field
-	
+
 	public String enterDataInName(String EnterEmpName) {
 
 		Action.sendKeys(enterEmpNameInSerach, EnterEmpName);
@@ -76,8 +81,26 @@ public class PIM_EmpList extends BaseClass {
 
 	}
 
+	// Entering some data in the ID field
+
+	public String enterDataInID(String EnterEmpID) {
+
+		Action.sendKeys(EnterIDinSearch, EnterEmpID);
+		return EnterEmpID;
+
+	}
+
+	// Select option from dropdown & get selected option
+
+	public int selectFromStatus(int integer) {
+
+		Action.selectByIndex(EmpStatusDropDown, integer);
+		return integer;
+
+	}
+
 	// Get data from the Name field
-	
+
 	public String getDataFromName() {
 
 		try {
@@ -88,26 +111,30 @@ public class PIM_EmpList extends BaseClass {
 			return null;
 		}
 	}
-	
-	// Entering some data in the Name field
-	
+
+	// Get data from the ID field
+
 	public String getDataFromID() {
 
 		try {
-			String data = Action.getTextbyAttribute(driver, EnterIDinSearch);
-			return (data != null && !data.isEmpty()) ? data : null; // Return null if data is empty
+			// Alternative: Using JavaScript to get the value
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			String ID = (String) js.executeScript("return arguments[0].value;", EnterIDinSearch);
+			System.out.println("Employee ID using JavaScript: " + ID);
+			// String ID = Action.getTextbyAttribute(driver, EnterIDinSearch);
+			return (ID != null && !ID.isEmpty()) ? ID : null; // Return null if data is empty
 		} catch (Exception e) {
 			System.err.println("Error retrieving data from the ID field: " + e.getMessage());
 			return null;
 		}
 	}
-	
-	// Entering some data in the Name field
-	public String getDataFromStatus(int integer) {
 
-		Action.selectByIndex(EmpStatusDropDown, integer );
+	// Get data from the Status field
+
+	public String getSelectedStatus(String data) {
+
 		try {
-			String data = Action.getText(driver, EmpStatusDropDown);
+			data = Action.getText(driver, EmpStatusDropDown);
 			return (data != null && !data.isEmpty()) ? data : null; // Return null if data is empty
 		} catch (Exception e) {
 			System.err.println("Error retrieving data from the ID field: " + e.getMessage());
@@ -134,60 +161,131 @@ public class PIM_EmpList extends BaseClass {
 
 	// This method show search result found message
 	public String toasterSearchRecordMessage(boolean toaster) {
-		
+
 		WebElement toasterElement = NoRecordToasterMessage;
-		
-       		if (toasterElement.isDisplayed()) {
-	            // Capture and return the text from the toaster message
-	            String toasterText = toasterElement.getText().trim();
-	            System.out.println("Toaster message: " + toasterText);
-	            return toasterText;
-	        } else {
-	            System.out.println("Toaster message is not displayed.");
-	            return null; // Return null or an empty string if the toaster is not displayed
-	        }
+
+		if (toasterElement.isDisplayed()) {
+			// Capture and return the text from the toaster message
+			String toasterText = toasterElement.getText().trim();
+			System.out.println("Toaster message: " + toasterText);
+			return toasterText;
+		} else {
+			System.out.println("Toaster message is not displayed.");
+			return null; // Return null or an empty string if the toaster is not displayed
+		}
 	}
 
+	// This method is use to get record available or not message on table.
 	public String tableSearchRecordMessage() {
 
 		Action.scrollByVisibility(driver, recordTableMessage);
 
-		String table = recordTableMessage.getText();
-/*		if (table.contains("Record Found")) {
-			System.out.println("Record Found");
-		} else if (table.contains("No Records Found")) {
-			System.out.println("No record found");
-		}
-*/
-		return table;
+		String tablemessage = recordTableMessage.getText();
+
+		return tablemessage;
 
 	}
 
-	public void empSearchByName(String EnterEmpName) {
+/*	// This method is use to get no of record shows in table.
+	public int noOfTableSearchRecord() {
+
+		Action.scrollByVisibility(driver, recordTableMessage);
+
+		String noOfRecords = recordTableMessage.getText();
+
+		int record = Integer.parseInt(noOfRecords);
+
+		System.out.println(record);
+
+		return record;
+
+	}
+*/
+
+	public String countTableData() {
+
+		List<WebElement> rows = TableRowCount;
+		List<WebElement> columns = TableColCount;
+		System.out.println("No. of Rows : " + rows.size());
+		System.out.println("No. of Columns : " + columns.size());
+
+		for (int r = 1; r <= rows.size(); r++) {
+			for (int c = 1; c <= columns.size() - 1; c++) {
+
+				String rowdata = driver.findElement(By.xpath("//*[@class='oxd-table-card'][" + r + "]/div/div[" + c + "]")).getText()+ "      ";
+				System.out.print(rowdata);
+			}
+			
+			System.out.println();
+
+		}
+
+		// I want a return type rowcount to compare thats why i convert integer row
+		// count to String
+		String rowscount = Integer.toString(rows.size());
+		return rowscount;
+
+	}
+	
+	public String getNameFromTable(String empName) {
+
+		List<WebElement> rows = TableRowCount;
+		List<WebElement> columns = TableColCount;
+		System.out.println("No. of Rows : " + rows.size());
+		System.out.println("No. of Columns : " + columns.size());
+
+		
+		boolean flag = false;
+		
+		for (int r = 1; r <= rows.size(); r++) {
+		//	for (int c = 1; c <= columns.size() - 1; c++) {
+
+				String rowdata = driver.findElement(By.xpath("//*[@class='oxd-table-card'][" + r + "]/div/div[3]")).getText()+ "      ";
+				System.out.print(rowdata);
+				
+				if(rowdata.equals(empName)) {
+					flag = true;
+					System.out.println(rowdata);
+					break;
+				}
+			}
+			
+			System.out.println();
+
+	//	}
+
+		return empName;
+
+	}
+
+	public String empSearchByName(String EnterEmpName) {
+
+		emplist = new PIM_EmpList();
 
 		Action.sendKeys(enterEmpNameInSerach, EnterEmpName);
 		Action.click(driver, SearchButton);
-		Action.getRowCount(TableRowCount);
-		Action.getColumncount(TablecolCount);
+		emplist.countTableData();
+		return EnterEmpName;
 
 	}
 
-	public void empSearchByID(String EnterID) {
+	public String empSearchByID(String EnterID) {
 
+		emplist = new PIM_EmpList();
 		Action.sendKeys(EnterIDinSearch, EnterID);
 		Action.click(driver, SearchButton);
-		Action.getRowCount(TableRowCount);
-		Action.getColumncount(TablecolCount);
+		emplist.countTableData();
+		return EnterID;
 
 	}
 
-	public void empSearchbyStatus(int index) {
+	public int empSearchbyStatus(int index) {
 
+		emplist = new PIM_EmpList();
 		Action.selectByIndex(EmpStatusDropDown, index);
 		Action.click(driver, SearchButton);
-		Action.isDisplayed(driver, recordTableMessage);
-		Action.getRowCount(TableRowCount);
-		Action.getColumncount(TablecolCount);
+		emplist.countTableData();
+		return index;
 	}
 
 	public String empUrl() {
@@ -195,4 +293,30 @@ public class PIM_EmpList extends BaseClass {
 		return EmployeePageURL;
 	}
 
+
+	public WebElement deleteRecord() throws InterruptedException {
+		
+		Action.click(driver, DeleteEmpButton);
+		Action.click(driver, DeleteEmpConfirmButton);
+		Thread.sleep(1500);
+		PIM_EmpList emplist = new PIM_EmpList();
+		emplist.toasterSearchRecordMessage(true);
+		
+		return NoRecordToasterMessage;
+		
+	}
+
+	public PIM_EmpAdd editEmployeePage() {
+		
+		Action.click(driver, EditEmpButton);
+		
+		return new PIM_EmpAdd();
+	}
+	
+	public PIM_EmpAdd employeeAdd() {
+		
+		Action.click(driver, AddEmpButton);
+		
+		return new PIM_EmpAdd();
+	}
 }

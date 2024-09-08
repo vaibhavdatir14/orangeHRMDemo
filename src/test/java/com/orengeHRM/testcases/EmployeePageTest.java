@@ -1,10 +1,12 @@
 package com.orengeHRM.testcases;
 
+import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 import com.orengeHRM.base.BaseClass;
 import com.orengeHRM.pageobject.Dashboard;
 import com.orengeHRM.pageobject.Login;
+import com.orengeHRM.pageobject.PIM_EmpAdd;
 import com.orengeHRM.pageobject.PIM_EmpList;
 
 public class EmployeePageTest extends BaseClass {
@@ -12,6 +14,7 @@ public class EmployeePageTest extends BaseClass {
 	Login login;
 	Dashboard dashboard;
 	PIM_EmpList emplist;
+	PIM_EmpAdd empadd;
 
 //	@Test
 	public void verifyResetAll() throws InterruptedException {
@@ -47,7 +50,7 @@ public class EmployeePageTest extends BaseClass {
 	}
 
 //	@Test
-	public void empSearchByName() throws InterruptedException {
+	public void verifyTableMsgSearchByName() throws InterruptedException {
 
 		login = new Login();
 		dashboard = new Dashboard();
@@ -57,7 +60,7 @@ public class EmployeePageTest extends BaseClass {
 		emplist = dashboard.navigateToPIM();
 
 		emplist.enterDataInName("anik54");
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		String actval = emplist.getDataFromName();
 		String expresult = "Records Found";
 		String expresult1 = "No Records Found";
@@ -68,15 +71,19 @@ public class EmployeePageTest extends BaseClass {
 			emplist.searchButton();
 			String message = emplist.tableSearchRecordMessage();
 
+			// Toaster is disappear quickly thats why it store here in variable
+			String toast = emplist.toasterSearchRecordMessage(true);
+
 			if (message.contains(expresult)) {
 
-				System.out.println(message);
+				System.out.println("Table Result " + message);
 			}
 
 			else if (message.contains(expresult1)) {
 
-				System.out.println(message);
-				emplist.toasterSearchRecordMessage(true);
+				System.out.println("Table Result " + message);
+				System.out.println(toast);
+				// emplist.toasterSearchRecordMessage(true);
 			}
 
 		}
@@ -89,7 +96,7 @@ public class EmployeePageTest extends BaseClass {
 	}
 
 //	@Test
-	public void empSearchByIDMessage() throws InterruptedException {
+	public void verifyTableMsgSearchByID() throws InterruptedException {
 
 		login = new Login();
 		dashboard = new Dashboard();
@@ -98,39 +105,34 @@ public class EmployeePageTest extends BaseClass {
 		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
 		emplist = dashboard.navigateToPIM();
 
-		emplist.empSearchByID("001");
-		Thread.sleep(3000);
-		String actval = emplist.getDataFromID();
-		String exprslt = "Records Found";
-		String exprslt1 = "No Records Found";
+		emplist.enterDataInID("vai");
 
-		if (actval != null && !actval.isEmpty()) {
+		emplist.searchButton();
+
+		String toast = emplist.toasterSearchRecordMessage(true);
+		String tabmessage = emplist.tableSearchRecordMessage();
+
+		String exprslt = "Records Found";
+		String eres = "Record Found";
+//		String exprslt1 = "No Records Found";
+
+		if (tabmessage != null && (tabmessage.contains(exprslt) || tabmessage.contains(eres))) {
 			System.out.println("Value present in ID field");
 
-			emplist.searchButton();
-			String tabmessage = emplist.tableSearchRecordMessage();
-
-			if (tabmessage.contains(exprslt)) {
-
-				System.out.println(tabmessage);
-			}
-
-			else if (tabmessage.contains(exprslt1)) {
-				
-				emplist.toasterSearchRecordMessage(true);
-				System.out.println(tabmessage);
-			}
+			System.out.println("Table Result " + tabmessage);
 
 		}
 
 		else {
-			emplist.toasterSearchRecordMessage(false);
-			System.out.println("Toaster not visible");
+
+			System.out.println(toast);
+			// emplist.toasterSearchRecordMessage(true);
+			System.out.println("No Result " + tabmessage);
 		}
 
 	}
 
-	@Test
+//	@Test
 	public void empSearchByStatus() throws InterruptedException {
 
 		login = new Login();
@@ -140,39 +142,214 @@ public class EmployeePageTest extends BaseClass {
 		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
 		emplist = dashboard.navigateToPIM();
 
-		emplist.getDataFromStatus(2);
+		emplist.selectFromStatus(2);
 		emplist.empSearchbyStatus(2);
-		
-/*		Thread.sleep(3000);
-		
-		String actval = emplist.getDataFromStatus();
-		String expreslt = "Records Found";
-		String expreslt1 = "No Records Found";
 
-		if (actval != null && !actval.isEmpty()) {
-			System.out.println("Value present in ID field");
+		/*
+		 * Thread.sleep(3000);
+		 * 
+		 * String actval = emplist.getSelectedStatus(); String expreslt =
+		 * "Records Found"; String expreslt1 = "No Records Found";
+		 * 
+		 * if (actval != null && !actval.isEmpty()) {
+		 * System.out.println("Value present in ID field");
+		 * 
+		 * emplist.searchButton(); String tabmsg = emplist.tableSearchRecordMessage();
+		 * 
+		 * if (tabmsg.contains(expreslt)) {
+		 * 
+		 * System.out.println(tabmsg); }
+		 * 
+		 * else if (tabmsg.contains(expreslt1)) {
+		 * 
+		 * emplist.toasterSearchRecordMessage(true); System.out.println(tabmsg); }
+		 * 
+		 * }
+		 * 
+		 * else { emplist.toasterSearchRecordMessage(false);
+		 * System.out.println("Toaster not visible"); }
+		 */
+	}
 
-			emplist.searchButton();
-			String tabmsg = emplist.tableSearchRecordMessage();
+//	@Test
+	public void verifyNoOfRowsEqualsTabMessage() throws InterruptedException {
 
-			if (tabmsg.contains(expreslt)) {
+		login = new Login();
+		dashboard = new Dashboard();
+		emplist = new PIM_EmpList();
 
-				System.out.println(tabmsg);
+		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		emplist = dashboard.navigateToPIM();
+
+		emplist.enterDataInName("charl");
+
+		emplist.searchButton();
+		Thread.sleep(2000);
+		String message = emplist.tableSearchRecordMessage();
+		String tabmsgstr = message.replaceAll("[^0-9]", "");
+		System.out.println(message);
+
+		// if (message.contains("Records Found") || message.contains("Record Found")) {
+
+		if (!message.equals("No Records Found")) {
+
+			// countTableData() return row size
+			String noOfRecords = emplist.countTableData();
+			System.out.println(noOfRecords);
+
+			noOfRecords.replaceAll("[^0-9]", "");
+
+			if (tabmsgstr.equals(noOfRecords)) {
+				System.out.println("The number of records matches the number of rows.");
+			} else {
+				System.out.println("The number of records does not match the number of rows.");
+			}
+		}
+	}
+
+//	@Test
+	public void verifyNameInTable() throws InterruptedException {
+
+		login = new Login();
+		dashboard = new Dashboard();
+		emplist = new PIM_EmpList();
+
+		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		emplist = dashboard.navigateToPIM();
+
+		String employeeName = "charl";
+		emplist.enterDataInName(employeeName);
+
+		emplist.searchButton();
+		Thread.sleep(2000);
+		String message = emplist.tableSearchRecordMessage();
+		System.out.println(message);
+
+		if (!message.equals("No Records Found")) {
+
+			// countTableData() return row size
+			String noOfRecords = emplist.getNameFromTable(employeeName);
+			System.out.println(noOfRecords);
+
+			if (noOfRecords.contains(employeeName)) {
+				System.out.println("The entered Name " + employeeName + " is available in data");
+			} else {
+				System.out.println("Record available but entered Name not found");
 			}
 
-			else if (tabmsg.contains(expreslt1)) {
+		}
+
+		else if (message.contains("No Records Found")) {
+			System.out.println("No data to show, Table message is match");
+		}
+
+	}
+
+//	@Test
+	public void verifyEmployeeDelete() throws InterruptedException {
+
+		login = new Login();
+		dashboard = new Dashboard();
+		emplist = new PIM_EmpList();
+
+		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		emplist = dashboard.navigateToPIM();
+
+		String employeeName = "bala";
+		emplist.enterDataInName(employeeName);
+
+		emplist.searchButton();
+		Thread.sleep(2000);
+		String message = emplist.tableSearchRecordMessage();
+		System.out.println(message);
+
+		if (!message.equals("No Records Found")) {
+
+			// countTableData() return row size
+			String noOfRecords = emplist.getNameFromTable(employeeName);
+			System.out.println(noOfRecords);
+
+			if (noOfRecords.equalsIgnoreCase(employeeName)) {
+				System.out.println("The entered Name " + employeeName + " is available in data");
 				
-				emplist.toasterSearchRecordMessage(true);
-				System.out.println(tabmsg);
+				Thread.sleep(3000);
+				emplist.deleteRecord();
+				
+			} else {
+				System.out.println("Record available but entered Name not found");
 			}
 
 		}
 
-		else {
-			emplist.toasterSearchRecordMessage(false);
-			System.out.println("Toaster not visible");
+		else if (message.contains("No Records Found")) {
+			System.out.println("No data to show, Table message is match");
+		}	
+		
+	}
+
+//	@Test
+	public void editEmployee() throws InterruptedException {
+
+		login = new Login();
+		dashboard = new Dashboard();
+		emplist = new PIM_EmpList();
+
+		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		emplist = dashboard.navigateToPIM();
+
+		String employeeName = "ash j";
+		emplist.enterDataInName(employeeName);
+
+		emplist.searchButton();
+		Thread.sleep(2000);
+		String message = emplist.tableSearchRecordMessage();
+		System.out.println(message);
+
+		if (!message.equals("No Records Found")) {
+
+			// countTableData() return row size
+			String noOfRecords = emplist.getNameFromTable(employeeName);
+			System.out.println(noOfRecords);
+
+			if (noOfRecords.equalsIgnoreCase(employeeName)) {
+				System.out.println("The entered Name " + employeeName + " is available in data");
+				empadd = emplist.editEmployeePage();
+				String title = empadd.addPagePersonalDetailsTitle();
+				String expTitle ="Personal Details";
+				
+				assertEquals(expTitle, title, "Edit Page not Open");
+				
+								
+			} else {
+				System.out.println("Record available but entered Name not found");
+			}
+
 		}
-*/
+
+		else if (message.contains("No Records Found")) {
+			System.out.println("No data to show, Table message is match");
+		}	
+		
+	}
+
+	@Test
+	public void addEmployee() throws InterruptedException {
+
+		login = new Login();
+		dashboard = new Dashboard();
+		emplist = new PIM_EmpList();
+
+		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		emplist = dashboard.navigateToPIM();
+
+		empadd = emplist.employeeAdd();
+		
+		empadd = emplist.editEmployeePage();
+		String title = empadd.addEmployeePageTitle();
+		String expTitle ="Add Employee";
+		
+		assertEquals(expTitle, title, "Add Employee Page not Open");
+		
 	}
 
 }

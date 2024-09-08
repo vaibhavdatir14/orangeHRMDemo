@@ -622,7 +622,7 @@ public class Action extends BaseClass {
 		}
 	}
 	
-	public static int getColumncount(WebElement row) {
+	public static int getColumncountTD(WebElement row) {
 		List<WebElement> columns = row.findElements(By.tagName("td"));
 		int a = columns.size();
 		System.out.println(columns.size());
@@ -635,8 +635,27 @@ public class Action extends BaseClass {
 	}
 	
 	
-	public static int getRowCount(WebElement table) {
+	public static int getRowCountTR(WebElement table) {
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
+		int a = rows.size() - 1;
+		return a;
+	}
+	
+	public static int getColumncountDiv(WebElement row) {
+		List<WebElement> columns = row.findElements(By.xpath("./div"));
+		int a = columns.size();
+		System.out.println(columns.size());
+		for (WebElement column : columns) {
+		//	column.getText();
+			System.out.print(column.getText());
+			System.out.print("|");
+		}
+		return a;
+	}
+	
+	
+	public static int getRowCountDiv(WebElement table) {
+		List<WebElement> rows = table.findElements(By.xpath("div"));
 		int a = rows.size() - 1;
 		return a;
 	}

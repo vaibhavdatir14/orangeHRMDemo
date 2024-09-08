@@ -61,7 +61,7 @@ public class BaseClass {
 
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		
 		// For Logging
 
