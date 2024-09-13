@@ -114,7 +114,7 @@ public class Action extends BaseClass {
 				System.out.println("The element is not Displayed");
 			}
 		} else {
-			System.out.println("Not displayed ");
+			System.out.println("Element not displayed ");
 		}
 		return flag;
 	}
@@ -192,34 +192,20 @@ public class Action extends BaseClass {
 	 */
 	
 	public static boolean selectByIndex(WebElement element, int index) {
-		boolean flag = false;
+		
 		try {
-			Select s = new Select(element);
-			s.selectByIndex(index);
-			flag = true;
-			return true;
-		} catch (Exception e) {
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("Option selected by Index");
-			} else {
-				System.out.println("Option not selected by Index");
-			}
-		}
+	        Select select = new Select(element);
+	        select.selectByIndex(index);
+	        System.out.println("Option selected by Index");
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace(); // Log the exception details for debugging
+	        System.out.println("Option not selected by Index");
+	        return false;
+	    }
+		
 	}
 
-	/**
-	 * select value from DD by using value
-	 * 
-	 * @param locator     : Action to be performed on element (Get it from Object
-	 *                    repository)
-	 * 
-	 * @param value       : Value wish to select from dropdown list.
-	 * 
-	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
-	 *                    Listbox etc..)
-	 */
 
 	
 	public static boolean selectByValue(WebElement element,String value) {

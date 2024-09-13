@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -22,8 +24,9 @@ public class BaseClass {
 
 	public static Properties prop;
 	public static WebDriver driver;
-	
+	public static Logger logger;
 		
+			
 	@BeforeTest
 	public void loadConfig() {
 
@@ -48,6 +51,9 @@ public class BaseClass {
 		WebDriverManager.chromedriver().setup();
 		String browserName = prop.getProperty("browser");
 
+		//for logging
+		logger = LogManager.getLogger("OrengeHRM");
+		
 		if (browserName.contains("Chrome")) {
 			driver = new ChromeDriver();
 		} else if (browserName.contains("FireFox")) {
@@ -61,12 +67,7 @@ public class BaseClass {
 
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
-//		Thread.sleep(3000);
-		
-		// For Logging
-
-//		logger = LogManager.getLogger("OrengeHRM");
-
+	
 	}
 
 	

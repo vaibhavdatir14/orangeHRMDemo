@@ -1,6 +1,8 @@
 package com.orengeHRM.testcases;
 
 import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.orengeHRM.base.BaseClass;
@@ -9,12 +11,13 @@ import com.orengeHRM.pageobject.Login;
 import com.orengeHRM.pageobject.PIM_EmpAdd;
 import com.orengeHRM.pageobject.PIM_EmpList;
 
-public class EmployeePageTest extends BaseClass {
+public class EmployeeListTest extends BaseClass {
 
 	Login login;
 	Dashboard dashboard;
 	PIM_EmpList emplist;
 	PIM_EmpAdd empadd;
+	
 
 //	@Test
 	public void verifyResetAll() throws InterruptedException {
@@ -132,7 +135,7 @@ public class EmployeePageTest extends BaseClass {
 
 	}
 
-//	@Test
+	@Test
 	public void empSearchByStatus() throws InterruptedException {
 
 		login = new Login();
@@ -142,33 +145,30 @@ public class EmployeePageTest extends BaseClass {
 		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
 		emplist = dashboard.navigateToPIM();
 
-		emplist.selectFromStatus(2);
-		emplist.empSearchbyStatus(2);
+		Thread.sleep(2000);
+		emplist.selectFromStatus(3);
+	
+		emplist.searchButton();
+		String tabmessage = emplist.tableSearchRecordMessage();
+		String toast = emplist.toasterSearchRecordMessage(true);
+		
+		String expreslt = "Records Found";
+		String expreslt1 = "No Records Found";
 
-		/*
-		 * Thread.sleep(3000);
-		 * 
-		 * String actval = emplist.getSelectedStatus(); String expreslt =
-		 * "Records Found"; String expreslt1 = "No Records Found";
-		 * 
-		 * if (actval != null && !actval.isEmpty()) {
-		 * System.out.println("Value present in ID field");
-		 * 
-		 * emplist.searchButton(); String tabmsg = emplist.tableSearchRecordMessage();
-		 * 
-		 * if (tabmsg.contains(expreslt)) {
-		 * 
-		 * System.out.println(tabmsg); }
-		 * 
-		 * else if (tabmsg.contains(expreslt1)) {
-		 * 
-		 * emplist.toasterSearchRecordMessage(true); System.out.println(tabmsg); }
-		 * 
-		 * }
-		 * 
-		 * else { emplist.toasterSearchRecordMessage(false);
-		 * System.out.println("Toaster not visible"); }
-		 */
+		if (tabmessage != null && (tabmessage.contains(expreslt) || tabmessage.contains(expreslt1))) {
+			System.out.println("Value selected in status dropdown");
+
+			System.out.println("Table Result " + tabmessage);
+
+		}
+
+		else {
+
+			System.out.println(toast);
+			// emplist.toasterSearchRecordMessage(true);
+			System.out.println("No. of records :-  " + tabmessage);
+		}
+
 	}
 
 //	@Test
@@ -271,10 +271,10 @@ public class EmployeePageTest extends BaseClass {
 
 			if (noOfRecords.equalsIgnoreCase(employeeName)) {
 				System.out.println("The entered Name " + employeeName + " is available in data");
-				
+
 				Thread.sleep(3000);
 				emplist.deleteRecord();
-				
+
 			} else {
 				System.out.println("Record available but entered Name not found");
 			}
@@ -283,11 +283,11 @@ public class EmployeePageTest extends BaseClass {
 
 		else if (message.contains("No Records Found")) {
 			System.out.println("No data to show, Table message is match");
-		}	
-		
+		}
+
 	}
 
-//	@Test
+	@Test
 	public void editEmployee() throws InterruptedException {
 
 		login = new Login();
@@ -297,7 +297,7 @@ public class EmployeePageTest extends BaseClass {
 		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
 		emplist = dashboard.navigateToPIM();
 
-		String employeeName = "ash j";
+		String employeeName = "amelia";
 		emplist.enterDataInName(employeeName);
 
 		emplist.searchButton();
@@ -313,13 +313,12 @@ public class EmployeePageTest extends BaseClass {
 
 			if (noOfRecords.equalsIgnoreCase(employeeName)) {
 				System.out.println("The entered Name " + employeeName + " is available in data");
-				empadd = emplist.editEmployeePage();
-				String title = empadd.addPagePersonalDetailsTitle();
-				String expTitle ="Personal Details";
-				
+				String title = emplist.editEmployeeFormMeassage();
+		
+				String expTitle = "Personal Details";
+
 				assertEquals(expTitle, title, "Edit Page not Open");
-				
-								
+
 			} else {
 				System.out.println("Record available but entered Name not found");
 			}
@@ -328,8 +327,8 @@ public class EmployeePageTest extends BaseClass {
 
 		else if (message.contains("No Records Found")) {
 			System.out.println("No data to show, Table message is match");
-		}	
-		
+		}
+
 	}
 
 	@Test
@@ -338,18 +337,18 @@ public class EmployeePageTest extends BaseClass {
 		login = new Login();
 		dashboard = new Dashboard();
 		emplist = new PIM_EmpList();
+		empadd = new PIM_EmpAdd();
 
 		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
 		emplist = dashboard.navigateToPIM();
 
-		empadd = emplist.employeeAdd();
+		emplist.employeeAddButton();
 		
-		empadd = emplist.editEmployeePage();
 		String title = empadd.addEmployeePageTitle();
-		String expTitle ="Add Employee";
-		
+		String expTitle = "Add Employee";
+
 		assertEquals(expTitle, title, "Add Employee Page not Open");
-		
+
 	}
 
 }

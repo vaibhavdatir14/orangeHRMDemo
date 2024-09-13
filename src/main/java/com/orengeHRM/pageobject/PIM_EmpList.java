@@ -13,6 +13,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.orengeHRM.actiondriver.Action;
 import com.orengeHRM.base.BaseClass;
@@ -46,8 +48,11 @@ public class PIM_EmpList extends BaseClass {
 	@FindBy(xpath = "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")
 	WebElement EnterIDinSearch;
 
-	@FindBy(xpath = "//*[@class='oxd-select-text oxd-select-text--active'][@xpath='1']")
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]")
 	WebElement EmpStatusDropDown;
+	
+	@FindBy(xpath = "//*[@class='oxd-select-dropdown --positon-bottom']/div")
+	List<WebElement> statusList;
 
 	@FindBy(xpath = "//*[@class='oxd-icon-button oxd-table-cell-action-space'][@type='button'][1]")
 	WebElement EditEmpButton;
@@ -63,6 +68,9 @@ public class PIM_EmpList extends BaseClass {
 
 	@FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
 	WebElement AddEmpButton;
+	
+	@FindBy(xpath = "//h6[@class='oxd-text oxd-text--h6 orangehrm-main-title'][contains(.,'Personal Details')]")
+	WebElement personalDetailsEmployeePageMessage;
 
 	// Page factory method initialization
 
@@ -92,12 +100,28 @@ public class PIM_EmpList extends BaseClass {
 
 	// Select option from dropdown & get selected option
 
-	public int selectFromStatus(int integer) {
+	public int selectFromStatus(int index) {
+		
+		 // Wait for the dropdown trigger to be visible and clickable
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(EmpStatusDropDown)).click();
 
-		Action.selectByIndex(EmpStatusDropDown, integer);
-		return integer;
+        // Wait for all options to be visible
+        wait.until(ExpectedConditions.visibilityOfAllElements(statusList));
 
-	}
+        // Check if the index is within bounds
+        if (index >= 0 && index < statusList.size()) {
+        	System.out.println(statusList.size());
+        	
+            // Click on the option at the specified index
+        	statusList.get(index).click();
+        } else {
+            throw new IndexOutOfBoundsException("Index " + index + " is out of bounds. Options size: " + statusList.size());
+        }
+		return index;
+   
+    }
+
 
 	// Get data from the Name field
 
@@ -134,7 +158,7 @@ public class PIM_EmpList extends BaseClass {
 	public String getSelectedStatus(String data) {
 
 		try {
-			data = Action.getText(driver, EmpStatusDropDown);
+			data = Action.getTextbyAttribute(driver, EmpStatusDropDown);
 			return (data != null && !data.isEmpty()) ? data : null; // Return null if data is empty
 		} catch (Exception e) {
 			System.err.println("Error retrieving data from the ID field: " + e.getMessage());
@@ -169,9 +193,12 @@ public class PIM_EmpList extends BaseClass {
 			String toasterText = toasterElement.getText().trim();
 			System.out.println("Toaster message: " + toasterText);
 			return toasterText;
-		} else {
-			System.out.println("Toaster message is not displayed.");
-			return null; // Return null or an empty string if the toaster is not displayed
+		} 
+		
+		else {
+			String message = "Record Might be found - No toaster to show";
+		//	System.out.println("Toaster message is not displayed.");
+			return message; // Return null or an empty string if the toaster is not displayed
 		}
 	}
 
@@ -306,17 +333,22 @@ public class PIM_EmpList extends BaseClass {
 		
 	}
 
-	public PIM_EmpAdd editEmployeePage() {
+	public String editEmployeeFormMeassage() {
 		
 		Action.click(driver, EditEmpButton);
 		
-		return new PIM_EmpAdd();
+		String message = Action.getTextbyAttribute(driver, personalDetailsEmployeePageMessage);
+		
+		return message;
+		
 	}
 	
-	public PIM_EmpAdd employeeAdd() {
+	public PIM_EmpAdd employeeAddButton() {
 		
 		Action.click(driver, AddEmpButton);
 		
 		return new PIM_EmpAdd();
 	}
+
+	
 }
