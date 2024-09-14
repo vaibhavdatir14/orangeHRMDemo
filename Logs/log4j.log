@@ -1,0 +1,8 @@
+2024-09-14 09:15:04 INFO  Log:11 - --------validLogin TEST START----------
+2024-09-14 09:15:07 INFO  Log:19 - User is entering correct login credentials
+2024-09-14 09:15:11 INFO  Log:19 - System get current URL
+2024-09-14 09:15:11 INFO  Log:19 - System compare expected and actual URL
+2024-09-14 09:15:11 INFO  Log:15 - ----------validLogin TEST END --------------
+2024-09-14 12:44:24 INFO  Log:19 - url entered in browser
+2024-09-14 12:44:29 INFO  Log:11 - --------verifyResetPassword TEST START----------
+2024-09-14 12:44:36 INFO  Log:15 - ----------verifyResetPassword TEST END --------------
