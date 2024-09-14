@@ -14,7 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
 import com.orengeHRM.actiondriver.Action;
-
+import com.orengeHRM.utility.Log;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -51,8 +51,6 @@ public class BaseClass {
 		WebDriverManager.chromedriver().setup();
 		String browserName = prop.getProperty("browser");
 
-		//for logging
-		logger = LogManager.getLogger("OrengeHRM");
 		
 		if (browserName.contains("Chrome")) {
 			driver = new ChromeDriver();
@@ -65,15 +63,20 @@ public class BaseClass {
 		Action.implicitWait(driver, 10);
 		Action.pageLoadTimeOut(driver, 30);
 
+		Log.info("url entered in browser");
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 	
+		//for logging
+				logger = LogManager.getLogger("OrengeHRM");
+				
 	}
 
 	
 //	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
+			Log.info("Browser is clossing");
 			driver.quit();
 		}
 	}

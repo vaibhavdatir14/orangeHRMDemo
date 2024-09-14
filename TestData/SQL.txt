@@ -1,0 +1,20 @@
+Union
+
+Create database MyEmployee
+use MyEmployee
+create table Emp_Hyd(Emp_Id int, Emp_Name varchar(20), Salary Money)
+create table Emp_Chennai(Emp_Id int, Emp_Name varchar(20), Salary Money)
+
+Insert into Emp_Hyd(Emp_Id, Emp_Name, Salary) values (001, 'Vaibhav', 10000)
+Insert into Emp_Hyd(Emp_Id, Emp_Name, Salary) values (002, 'Sagar', 5000)
+Insert into Emp_Hyd(Emp_Id, Emp_Name, Salary) values (003, 'Sam', 7000)
+
+Insert into Emp_Chennai(Emp_Id, Emp_Name, Salary) values (001, 'Vaibhav', 70000)
+Insert into Emp_Chennai(Emp_Id, Emp_Name, Salary) values (004, 'Sarika', 7000)
+
+Select * from Emp_Hyd 
+Union 
+Select * from Emp_Chennai
+
+
+O/p

@@ -9,17 +9,19 @@ import com.orengeHRM.pageobject.Login;
 import com.orengeHRM.pageobject.ResetPassword;
 import com.orengeHRM.utility.Log;
 
+
 public class LoginTest extends BaseClass {
 
 	Login login; // created object of Login pageObject
 
-	@Test
+//	@Test
 	public void validLogin() throws InterruptedException {
 
 		Log.startTestCase("validLogin");
 
 		login = new Login();
 		Dashboard dashboard = new Dashboard();
+		
 		Thread.sleep(3000);
 
 		Log.info("User is entering correct login credentials");
@@ -34,6 +36,7 @@ public class LoginTest extends BaseClass {
 			Assert.assertEquals(acturl, expurl);
 			System.out.println("Test Passed: Login Success");
 		} catch (AssertionError e) {
+			Log.error("Error occured in execution" + e);
 			System.out.println("Test Failed: " + e.getMessage());
 		}
 		Log.endTestCase("validLogin");
@@ -53,24 +56,35 @@ public class LoginTest extends BaseClass {
 //	@Test
 	public void forgotPassword() throws InterruptedException {
 
+		Log.startTestCase("forgotPassword");
+		
 		login = new Login();
 		Thread.sleep(5000);
 
+		Log.info("Clicking on Forgot Password Link");
 		boolean forgotLink = login.forgotPassAvailable();
+		Log.info("Verify forgot Link available or not");
 		Assert.assertTrue(forgotLink);
+		
+		Log.endTestCase("forgotPassword");
 	}
 
-//	@Test
+	@Test
 	public void verifyResetPassword() throws InterruptedException {
 
+		Log.startTestCase("verifyResetPassword");
 		login = new Login();
+		
 		ResetPassword resetpass = new ResetPassword();
 		Thread.sleep(5000);
 
+		Log.info("Clicking on Forgot password link");
 		resetpass = login.resetPassword();
+		
+		Log.info("Verify reset password page open");
 		boolean title = resetpass.verifyResetPassPage();
 		Assert.assertTrue(title);
-
+		Log.endTestCase("verifyResetPassword");
 	}
 
 }
