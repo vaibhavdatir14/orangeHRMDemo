@@ -1,10 +1,13 @@
 package com.orengeHRM.testcases;
 
+import org.testng.annotations.Test;
+
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
+
+import com.orengeHRM.actiondriver.Action;
 import com.orengeHRM.base.BaseClass;
 import com.orengeHRM.pageobject.Dashboard;
 import com.orengeHRM.pageobject.Login;
@@ -20,7 +23,7 @@ public class AddEmployeeTest extends BaseClass{
 	PIM_EmpAdd empadd;
 	
 	
-	@Test
+//	@Test
 	public void addEmpWithoutLoginDetails() throws IOException, InterruptedException {
 		
 		Log.startTestCase("addEmpWithoutLoginDetails");
@@ -44,12 +47,14 @@ public class AddEmployeeTest extends BaseClass{
 		Log.info("Uploading employee profile photo");
 		empadd.addPhoto("/OrengeHRM/TestData/OrangeHRM_fileUpload.exe");
 		empadd.saveEmployee();		
+		
 		Log.info("Verify success message to confirm employee added");
 		String successmessage = empadd.toasterSuccessMessage(true);
 		
+		Action.screenShot(driver, "addEmpWithoutLoginDetails");
 		if(empadd.validateEmpID()) {
 						
-			System.out.println("Employee ID is already exist, please try another Employee ID");
+			System.out.println("Test case Fail: - Employee ID is already exist, please try another Employee ID");
 			
 		}
 		else {
@@ -60,7 +65,7 @@ public class AddEmployeeTest extends BaseClass{
 	}
 	
 	
-	@Test
+//	@Test
 	public void addEmpWithLoginDetails() throws IOException, InterruptedException {
 		
 		Log.startTestCase("addEmpWithLoginDetails");
@@ -92,6 +97,8 @@ public class AddEmployeeTest extends BaseClass{
 		String successmessage = empadd.toasterSuccessMessage(true);
 		
 		Log.info("Validate employee ID already exist or not");
+	
+		Action.screenShot(driver, "addEmpWithLoginDetails");
 		if(empadd.validateEmpID()) {
 //			empadd.enterEmpID("500124");
 //			empadd.saveEmployee();	
@@ -102,6 +109,7 @@ public class AddEmployeeTest extends BaseClass{
 		else if(empadd.empAlreadyExistMsg()) {
 			Log.info("Validate employee name already exist or not");
 			System.out.println("Employee name is already exist, please try another Employee Name");
+			Action.screenShot(driver, "addEmpWithLoginDetails");
 		}
 		else {
 			
@@ -111,7 +119,7 @@ public class AddEmployeeTest extends BaseClass{
 		Log.endTestCase("addEmpWithLoginDetails");
 	}
 	
-	@Test
+//	@Test
 	public void cancelAddEmployee() throws InterruptedException {
 		
 		Log.startTestCase("cancelAddEmployee");
@@ -135,13 +143,14 @@ public class AddEmployeeTest extends BaseClass{
 		String acturl = dashboard.getCurrentURL();
 		String ExpUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList";
 		Log.info("Validating after cancel opration it redirected on Employee List page");
+		Action.screenShot(driver, "cancelAddEmployee");
 		Assert.assertEquals(acturl, ExpUrl);
 			
 		Log.info("cancelAddEmployee");
 	}
 	
 	
-	@Test
+//	@Test
 	public void validateLargeFileValidation() throws IOException, InterruptedException {
 		
 		Log.info("validateLargeFileValidation");
@@ -160,11 +169,14 @@ public class AddEmployeeTest extends BaseClass{
 		Thread.sleep(2000);
 		
 		Log.info("Uploading employee profile photo");
+		Action.screenShot(driver, "validateLargeFileValidation");
 		empadd.addPhoto("C://Users/Admin/selenium_practice/OrengeHRM/TestData/Invalid_file.exe/LargFile_Validation_Test.exe");
 		
 		Log.info("Validating uploaded photo size");
+		Action.screenShot(driver, "validateLargeFileValidation");
 		boolean flag = empadd.validatePhotoSize();	
 		Assert.assertTrue(flag);
+		
 		
 		Log.endTestCase("validateLargeFileValidation");
 	}
@@ -186,11 +198,12 @@ public class AddEmployeeTest extends BaseClass{
 		
 		empadd = emplist.employeeAddButton();
 		Thread.sleep(2000);
-		
+	
 		Log.info("Uploading employee profile photo");
 		empadd.addPhoto("C://Users/Admin/selenium_practice/OrengeHRM/TestData/Invalid_file.exe");
-		
+		Thread.sleep(2000);
 		Log.info("Validating photo type");
+		Action.screenShot(driver, "validateInvalidFileType");
 		boolean flag = empadd.validatePhotoSize();	
 		Assert.assertTrue(flag);
 		

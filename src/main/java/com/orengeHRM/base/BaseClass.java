@@ -18,18 +18,17 @@ import com.orengeHRM.utility.Log;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-
 public class BaseClass {
 
 	public static Properties prop;
 	public static WebDriver driver;
 	public static Logger logger;
-		
-			
+//	ExtentListener extentlistner = new ExtentListener();
+
 	@BeforeTest
 	public void loadConfig() {
 
+//		extentlistner.configureReport();
 		try {
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream(
@@ -47,11 +46,9 @@ public class BaseClass {
 	@BeforeMethod
 	public static void launchBrowser() throws InterruptedException {
 
-				
 		WebDriverManager.chromedriver().setup();
 		String browserName = prop.getProperty("browser");
 
-		
 		if (browserName.contains("Chrome")) {
 			driver = new ChromeDriver();
 		} else if (browserName.contains("FireFox")) {
@@ -66,13 +63,12 @@ public class BaseClass {
 		Log.info("url entered in browser");
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
-	
-		//for logging
-				logger = LogManager.getLogger("OrengeHRM");
-				
+
+		// for logging
+		logger = LogManager.getLogger("OrengeHRM");
+
 	}
 
-	
 //	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
