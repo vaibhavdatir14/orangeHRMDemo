@@ -13,18 +13,17 @@ import com.orengeHRM.actiondriver.Action;
 import com.orengeHRM.base.BaseClass;
 
 public class Login extends BaseClass {
-	
-	
-	// Created a constructor to initialize all page object, this keyword use to initialize all object.
 
-		public Login() {
-			
-			PageFactory.initElements(driver, this); // Initialize WebElements
-			
-		}
-		
+	// Created a constructor to initialize all page object, this keyword use to
+	// initialize all object.
 
-	@FindBy(name="username")
+	public Login() {
+
+		PageFactory.initElements(driver, this); // Initialize WebElements
+
+	}
+
+	@FindBy(name = "username")
 	WebElement userName;
 
 	@FindBy(name = "password")
@@ -38,46 +37,51 @@ public class Login extends BaseClass {
 
 	@FindBy(xpath = "//p[contains (.,'Invalid credentials')]")
 	WebElement invalidMsg;
-	
+
 	@FindBy(xpath = "//h5[contains(.,'Login')]")
 	WebElement loginMessage;
 
+	@FindBy(xpath = "//*[contains(.,'Required')]")
+	WebElement credentialBlank;
 
-	public Dashboard validLogin(String uname, String pwd) {
-		
+	public Dashboard verifyLogin(String uname, String pwd) {
+
 		Action.sendKeys(userName, uname);
 		Action.sendKeys(Password, pwd);
 		Action.click(driver, loginButton);
-		
+
 		return new Dashboard();
 
 	}
 
-	public boolean invalidLogin(String InvName, String InvPwd) {
+	public String invalidLogin() {
 
-		Action.sendKeys(userName, InvName);
-		Action.sendKeys(Password, InvPwd);
-		Action.click(driver, loginButton);
-		return Action.isDisplayed(driver, invalidMsg);
-	//	return invalidMsg.isDisplayed();
+		Action.isDisplayed(driver, invalidMsg);
+		String invalidmsg = invalidMsg.getText();
+		return invalidmsg;
+	}
+
+	public String blankCredentials() {
+
+		Action.isDisplayed(driver, credentialBlank);
+		String requiredmsg = credentialBlank.getText();
+		return requiredmsg;
 
 	}
-	
-		public boolean forgotPassAvailable() {
+
+	public boolean forgotPassAvailable() {
 		return Action.isDisplayed(driver, forgotPassword);
 
 	}
 
-		public ResetPassword resetPassword() {
+	public ResetPassword resetPassword() {
 		Action.click(driver, forgotPassword);
 		return new ResetPassword();
 	}
-		
-		public boolean loginMessage() {
-			
-			return Action.isDisplayed(driver, loginMessage);
-		}
 
-	
+	public boolean loginMessage() {
+
+		return Action.isDisplayed(driver, loginMessage);
+	}
+
 }
-

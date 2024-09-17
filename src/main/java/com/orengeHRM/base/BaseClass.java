@@ -14,6 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
 import com.orengeHRM.actiondriver.Action;
+import com.orengeHRM.utility.ExtentManager;
 import com.orengeHRM.utility.Log;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -23,12 +24,12 @@ public class BaseClass {
 	public static Properties prop;
 	public static WebDriver driver;
 	public static Logger logger;
-//	ExtentListener extentlistner = new ExtentListener();
 
-	@BeforeTest
+	@BeforeSuite
 	public void loadConfig() {
 
-//		extentlistner.configureReport();
+		ExtentManager.setExtent();
+		
 		try {
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream(
@@ -64,17 +65,23 @@ public class BaseClass {
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 
-		// for logging
+		// for logging, in String we write ProjectName to load log4j2.xml
 		logger = LogManager.getLogger("OrengeHRM");
 
 	}
 
-//	@AfterMethod
-	public void tearDown() {
+	@AfterMethod
+	public void tearDown() throws InterruptedException {
 		if (driver != null) {
+			Thread.sleep(3000);
 			Log.info("Browser is clossing");
 			driver.quit();
 		}
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		ExtentManager.endReport();
 	}
 
 }

@@ -11,7 +11,7 @@ import com.orengeHRM.base.BaseClass;
 
 public class PIM_EmpAdd extends BaseClass {
 
-	private static final String String = null;
+	
 
 	PIM_EmpAdd empadd;
 
@@ -82,13 +82,13 @@ public class PIM_EmpAdd extends BaseClass {
 		return pageTitle;
 	}
 
-	public String enterEmpFullName(String FirstName, String MiddleName, String LastName) {
+	public void enterEmpFullName(String FirstName, String MiddleName, String LastName) {
 
 		Action.sendKeys(firstName, FirstName);
 		Action.sendKeys(middleName, MiddleName);
 		Action.sendKeys(lastName, LastName);
 
-		return String;
+		return;
 	}
 
 	public boolean validateEmpID() {

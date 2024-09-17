@@ -29,7 +29,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -69,7 +69,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -122,7 +122,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -166,7 +166,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -208,7 +208,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -253,7 +253,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -295,7 +295,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -341,7 +341,7 @@ public class EmployeeListTest extends BaseClass {
 		emplist = new PIM_EmpList();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -390,7 +390,7 @@ public class EmployeeListTest extends BaseClass {
 		empadd = new PIM_EmpAdd();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("Navigate on PIM page");
 		emplist = dashboard.navigateToPIM();

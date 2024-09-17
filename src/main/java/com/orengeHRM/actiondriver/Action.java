@@ -774,7 +774,7 @@ public class Action extends BaseClass {
 	}
 	
 	public static String screenShot(WebDriver driver, String filename) {
-		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		String dateName = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		String destination = (System.getProperty("user.dir") + "\\Screenshots\\" + filename + "_" + dateName + ".png");

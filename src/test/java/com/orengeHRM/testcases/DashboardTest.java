@@ -23,7 +23,7 @@ public class DashboardTest extends BaseClass {
 		dashboard = new Dashboard();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 
 		Log.info("Verifying Quick Launch Vailable or not");
 		boolean result = dashboard.quickLaunchAvailable();
@@ -41,7 +41,7 @@ public class DashboardTest extends BaseClass {
 		dashboard = new Dashboard();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 
 		Log.info("Counting Quick Launch");
 		int totalOption = dashboard.quickLaunchCount();
@@ -58,7 +58,7 @@ public class DashboardTest extends BaseClass {
 		dashboard = new Dashboard();
 
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 
 		Log.info("Showing Quick Launch List");
 		dashboard.quickLaunchList();
@@ -75,7 +75,7 @@ public class DashboardTest extends BaseClass {
 		pimEmpList = new PIM_EmpList();
 		
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("User Navigating on PIM page");
 		pimEmpList = dashboard.navigateToPIM();

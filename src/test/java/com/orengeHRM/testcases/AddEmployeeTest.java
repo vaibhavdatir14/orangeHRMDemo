@@ -33,7 +33,7 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = new PIM_EmpAdd();
 		
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("User Navigating on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -75,7 +75,7 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = new PIM_EmpAdd();
 		
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("User Navigating on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -129,7 +129,7 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = new PIM_EmpAdd();
 		
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("User Navigating on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -146,7 +146,7 @@ public class AddEmployeeTest extends BaseClass{
 		Action.screenShot(driver, "cancelAddEmployee");
 		Assert.assertEquals(acturl, ExpUrl);
 			
-		Log.info("cancelAddEmployee");
+		Log.endTestCase("cancelAddEmployee");
 	}
 	
 	
@@ -160,7 +160,7 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = new PIM_EmpAdd();
 		
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("User Navigating on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -169,7 +169,7 @@ public class AddEmployeeTest extends BaseClass{
 		Thread.sleep(2000);
 		
 		Log.info("Uploading employee profile photo");
-		Action.screenShot(driver, "validateLargeFileValidation");
+		
 		empadd.addPhoto("C://Users/Admin/selenium_practice/OrengeHRM/TestData/Invalid_file.exe/LargFile_Validation_Test.exe");
 		
 		Log.info("Validating uploaded photo size");
@@ -191,7 +191,7 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = new PIM_EmpAdd();
 		
 		Log.info("User entering credentials to login");
-		dashboard = login.validLogin(prop.getProperty("username"), prop.getProperty("password"));
+		dashboard = login.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 		Log.info("User Navigating on PIM page");
 		emplist = dashboard.navigateToPIM();
@@ -203,9 +203,9 @@ public class AddEmployeeTest extends BaseClass{
 		empadd.addPhoto("C://Users/Admin/selenium_practice/OrengeHRM/TestData/Invalid_file.exe");
 		Thread.sleep(2000);
 		Log.info("Validating photo type");
-		Action.screenShot(driver, "validateInvalidFileType");
-		boolean flag = empadd.validatePhotoSize();	
-		Assert.assertTrue(flag);
+
+		boolean flag = empadd.invalidFileType();	
+		Assert.assertTrue(flag, "Message ");
 		
 		Log.endTestCase("validateInvalidFileType");
 	}
