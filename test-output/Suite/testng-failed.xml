@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.orengeHRM.testcases.LoginTest">
+      <class name="com.orengeHRM.testcases.AddEmployeeTest">
         <methods>
           <include name="launchBrowser"/>
           <include name="afterSuite"/>
           <include name="loadConfig"/>
           <include name="tearDown"/>
-          <include name="verifyLogin" invocation-numbers="2"/>
+          <include name="addEmpWithLoginDetails" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.orengeHRM.testcases.LoginTest -->
+      </class> <!-- com.orengeHRM.testcases.AddEmployeeTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

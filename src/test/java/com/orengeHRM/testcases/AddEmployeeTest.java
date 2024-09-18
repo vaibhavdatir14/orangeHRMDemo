@@ -9,6 +9,7 @@ import org.testng.Assert;
 
 import com.orengeHRM.actiondriver.Action;
 import com.orengeHRM.base.BaseClass;
+import com.orengeHRM.dataprovider.DataProviders;
 import com.orengeHRM.pageobject.Dashboard;
 import com.orengeHRM.pageobject.Login;
 import com.orengeHRM.pageobject.PIM_EmpAdd;
@@ -65,8 +66,8 @@ public class AddEmployeeTest extends BaseClass{
 	}
 	
 	
-//	@Test
-	public void addEmpWithLoginDetails() throws IOException, InterruptedException {
+	@Test(dataProvider = "EnterEmployeeName", dataProviderClass = DataProviders.class)
+	public void addEmpWithLoginDetails(String FName, String MName, String LName, String Name, String Pass, String CPass) throws IOException, InterruptedException {
 		
 		Log.startTestCase("addEmpWithLoginDetails");
 		login = new Login();
@@ -83,13 +84,15 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = emplist.employeeAddButton();
 		
 		Log.info("Entering employee full name");
-		empadd.enterEmpFullName("Sam", "Joseph", "Landwood");
+//		empadd.enterEmpFullName("Sam", "Joseph", "Landwood");
+		empadd.enterEmpFullName(FName, MName, LName);
 		
 		Log.info("Uploading employee profile photo");
 		empadd.addPhoto("C:/Users/Admin/selenium_practice/OrengeHRM/TestData/OrangeHRM_fileUpload.exe");
 		
 		Log.info("Switching Login details and entering details");
-		empadd.loginDetails("pranu1", "abcd123", "abcd123");
+//		empadd.loginDetails("pranu1", "abcd123", "abcd123");
+		empadd.loginDetails(Name, Pass, CPass);
 		
 		emplist=empadd.saveEmployee();		
 		

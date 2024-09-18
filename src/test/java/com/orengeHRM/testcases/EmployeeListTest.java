@@ -381,7 +381,7 @@ public class EmployeeListTest extends BaseClass {
 	}
 
 	@Test
-	public void addEmployee() throws InterruptedException {
+	public void addEmployeeButton() throws InterruptedException {
 		
 		Log.startTestCase("addEmployee");
 		login = new Login();

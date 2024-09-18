@@ -236,3 +236,72 @@
 2024-09-17 19:39:29 INFO  Log:19 - System get current URL
 2024-09-17 19:39:29 INFO  Log:19 - System compare expected and actual URL
 2024-09-17 19:39:53 INFO  Log:19 - Browser is clossing
+2024-09-18 17:20:28 INFO  Log:19 - url entered in browser
+2024-09-18 17:20:33 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-18 17:20:34 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:20:38 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:20:40 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-18 17:20:43 INFO  Log:19 - Entering employee full name
+2024-09-18 17:20:44 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:20:48 INFO  Log:19 - Switching Login details and entering details
+2024-09-18 17:20:51 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-18 17:21:04 INFO  Log:19 - Browser is clossing
+2024-09-18 17:21:09 INFO  Log:19 - url entered in browser
+2024-09-18 17:25:05 INFO  Log:19 - url entered in browser
+2024-09-18 17:25:20 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-18 17:25:20 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:25:25 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:25:29 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-18 17:25:31 INFO  Log:19 - Entering employee full name
+2024-09-18 17:25:33 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:25:35 INFO  Log:19 - Switching Login details and entering details
+2024-09-18 17:25:38 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-18 17:25:41 INFO  Log:19 - Validate employee ID already exist or not
+2024-09-18 17:25:52 INFO  Log:15 - ----------addEmpWithLoginDetails TEST END --------------
+2024-09-18 17:25:55 INFO  Log:19 - Browser is clossing
+2024-09-18 17:25:59 INFO  Log:19 - url entered in browser
+2024-09-18 17:26:10 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-18 17:26:10 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:26:13 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:26:16 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-18 17:26:17 INFO  Log:19 - Entering employee full name
+2024-09-18 17:26:19 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:26:22 INFO  Log:19 - Switching Login details and entering details
+2024-09-18 17:26:24 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-18 17:26:37 INFO  Log:19 - Browser is clossing
+2024-09-18 17:26:42 INFO  Log:19 - url entered in browser
+2024-09-18 17:26:50 INFO  Log:11 - --------validateInvalidFileType TEST START----------
+2024-09-18 17:26:50 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:26:52 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:27:01 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:27:06 INFO  Log:19 - Validating photo type
+2024-09-18 17:27:06 INFO  Log:15 - ----------validateInvalidFileType TEST END --------------
+2024-09-18 17:27:09 INFO  Log:19 - Browser is clossing
+2024-09-18 17:30:18 INFO  Log:19 - url entered in browser
+2024-09-18 17:30:24 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-18 17:30:24 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:30:28 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:30:30 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-18 17:30:32 INFO  Log:19 - Entering employee full name
+2024-09-18 17:30:34 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:30:37 INFO  Log:19 - Switching Login details and entering details
+2024-09-18 17:30:39 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-18 17:30:52 INFO  Log:19 - Browser is clossing
+2024-09-18 17:30:57 INFO  Log:19 - url entered in browser
+2024-09-18 17:31:07 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-18 17:31:07 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:31:10 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:31:12 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-18 17:31:14 INFO  Log:19 - Entering employee full name
+2024-09-18 17:31:16 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:31:19 INFO  Log:19 - Switching Login details and entering details
+2024-09-18 17:31:21 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-18 17:31:35 INFO  Log:19 - Browser is clossing
+2024-09-18 17:31:40 INFO  Log:19 - url entered in browser
+2024-09-18 17:31:46 INFO  Log:11 - --------validateInvalidFileType TEST START----------
+2024-09-18 17:31:46 INFO  Log:19 - User entering credentials to login
+2024-09-18 17:31:49 INFO  Log:19 - User Navigating on PIM page
+2024-09-18 17:31:55 INFO  Log:19 - Uploading employee profile photo
+2024-09-18 17:31:59 INFO  Log:19 - Validating photo type
+2024-09-18 17:32:00 INFO  Log:15 - ----------validateInvalidFileType TEST END --------------
+2024-09-18 17:32:03 INFO  Log:19 - Browser is clossing

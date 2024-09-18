@@ -59,16 +59,7 @@ public class LoginTest extends BaseClass {
 		Log.endTestCase("verifyLogin");
 	}
 
-	// we will parameterized this test
-//	@Test
-	/*
-	 * public void invalidLogin() throws InterruptedException { login = new Login();
-	 * Thread.sleep(3000); boolean result = login.invalidLogin("abcd", "admin123");
-	 * 
-	 * Assert.assertTrue(result);
-	 * 
-	 * }
-	 */
+	
 //	@Test
 	public void forgotPassword() throws InterruptedException {
 

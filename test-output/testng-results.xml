@@ -1,103 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-17T19:38:24 IST" name="Suite" finished-at="2024-09-17T19:39:54 IST" duration-ms="89750">
+  <suite started-at="2024-09-18T17:30:06 IST" name="Suite" finished-at="2024-09-18T17:32:04 IST" duration-ms="117583">
     <groups>
     </groups>
-    <test started-at="2024-09-17T19:38:24 IST" name="Test" finished-at="2024-09-17T19:39:54 IST" duration-ms="89750">
-      <class name="com.orengeHRM.testcases.LoginTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:38:23 IST" name="loadConfig" finished-at="2024-09-17T19:38:24 IST" duration-ms="1484" status="PASS">
+    <test started-at="2024-09-18T17:30:06 IST" name="Test" finished-at="2024-09-18T17:32:04 IST" duration-ms="117583">
+      <class name="com.orengeHRM.testcases.AddEmployeeTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:30:05 IST" name="loadConfig" finished-at="2024-09-18T17:30:06 IST" duration-ms="1235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:38:30 IST" name="launchBrowser" finished-at="2024-09-17T19:38:42 IST" duration-ms="12542" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:30:12 IST" name="launchBrowser" finished-at="2024-09-18T17:30:24 IST" duration-ms="11976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:38:42 IST" name="verifyLogin" data-provider="LoginData" finished-at="2024-09-17T19:38:49 IST" duration-ms="7039" status="PASS">
+        <test-method signature="addEmpWithLoginDetails(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:30:24 IST" name="addEmpWithLoginDetails" data-provider="EnterEmployeeName" finished-at="2024-09-18T17:30:49 IST" duration-ms="24487" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Admin]]>
+                <![CDATA[Sam]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[admin123]]>
+                <![CDATA[Joseph]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:38:49 IST" name="tearDown" finished-at="2024-09-17T19:38:54 IST" duration-ms="4290" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:38:54 IST" name="launchBrowser" finished-at="2024-09-17T19:39:05 IST" duration-ms="11045" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:39:05 IST" name="verifyLogin" data-provider="LoginData" finished-at="2024-09-17T19:39:11 IST" duration-ms="6747" status="PASS">
-          <params>
-            <param index="0">
+            <param index="2">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[Peter]]>
               </value>
             </param>
-            <param index="1">
+            <param index="3">
               <value>
-                <![CDATA[vai898]]>
+                <![CDATA[Johnalec]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:39:11 IST" name="tearDown" finished-at="2024-09-17T19:39:16 IST" duration-ms="4428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:39:16 IST" name="launchBrowser" finished-at="2024-09-17T19:39:25 IST" duration-ms="9064" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:39:25 IST" name="verifyLogin" data-provider="LoginData" finished-at="2024-09-17T19:39:49 IST" duration-ms="24489" status="FAIL">
-          <params>
-            <param index="0">
+            <param index="4">
               <value>
-                <![CDATA[vaibhav]]>
+                <![CDATA[abcd12@q]]>
               </value>
             </param>
-            <param index="1">
+            <param index="5">
               <value>
-                <![CDATA[  ]]>
+                <![CDATA[abcd12@q]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains (.,'Invalid credentials')]"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='oxd-toast-content oxd-toast-content--success']"}
   (Session info: chrome=128.0.6613.138)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VAIBHAV', ip: '192.168.149.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+System info: host: 'VAIBHAV', ip: '192.168.202.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b058493413c58624b05d4f59f5cc1f46
-*** Element info: {Using=xpath, value=//p[contains (.,'Invalid credentials')]}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52269}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84ce497edb9bebd123ca3e6a6fb4bdcd
+*** Element info: {Using=xpath, value=//*[@class='oxd-toast-content oxd-toast-content--success']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains (.,'Invalid credentials')]"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='oxd-toast-content oxd-toast-content--success']"}
   (Session info: chrome=128.0.6613.138)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VAIBHAV', ip: '192.168.149.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+System info: host: 'VAIBHAV', ip: '192.168.202.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b058493413c58624b05d4f59f5cc1f46
-*** Element info: {Using=xpath, value=//p[contains (.,'Invalid credentials')]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52269}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84ce497edb9bebd123ca3e6a6fb4bdcd
+*** Element info: {Using=xpath, value=//*[@class='oxd-toast-content oxd-toast-content--success']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -115,9 +87,9 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy31.getText(Unknown Source)
-at com.orengeHRM.pageobject.Login.invalidLogin(Login.java:60)
-at com.orengeHRM.testcases.LoginTest.verifyLogin(LoginTest.java:47)
+at jdk.proxy2/jdk.proxy2.$Proxy31.isDisplayed(Unknown Source)
+at com.orengeHRM.pageobject.PIM_EmpAdd.toasterSuccessMessage(PIM_EmpAdd.java:130)
+at com.orengeHRM.testcases.AddEmployeeTest.addEmpWithLoginDetails(AddEmployeeTest.java:100)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,16 +123,145 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:39:50 IST" name="tearDown" finished-at="2024-09-17T19:39:54 IST" duration-ms="4332" status="PASS">
+        </test-method> <!-- addEmpWithLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:30:49 IST" name="tearDown" finished-at="2024-09-18T17:30:54 IST" duration-ms="4537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.orengeHRM.testcases.LoginTest@2767e23c]" started-at="2024-09-17T19:39:55 IST" name="afterSuite" finished-at="2024-09-17T19:39:55 IST" duration-ms="43" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:30:54 IST" name="launchBrowser" finished-at="2024-09-18T17:31:07 IST" duration-ms="12859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="addEmpWithLoginDetails(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:31:07 IST" name="addEmpWithLoginDetails" data-provider="EnterEmployeeName" finished-at="2024-09-18T17:31:32 IST" duration-ms="24712" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Joseph]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vaibhav]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Phillip]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Johnalec]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[jjkl1234]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[jjkl1234]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='oxd-toast-content oxd-toast-content--success']"}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VAIBHAV', ip: '192.168.202.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52291}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4141f77fcf83fea9f346f7c8dbf497f0
+*** Element info: {Using=xpath, value=//*[@class='oxd-toast-content oxd-toast-content--success']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='oxd-toast-content oxd-toast-content--success']"}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VAIBHAV', ip: '192.168.202.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52291}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4141f77fcf83fea9f346f7c8dbf497f0
+*** Element info: {Using=xpath, value=//*[@class='oxd-toast-content oxd-toast-content--success']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy31.isDisplayed(Unknown Source)
+at com.orengeHRM.pageobject.PIM_EmpAdd.toasterSuccessMessage(PIM_EmpAdd.java:130)
+at com.orengeHRM.testcases.AddEmployeeTest.addEmpWithLoginDetails(AddEmployeeTest.java:100)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmpWithLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:31:32 IST" name="tearDown" finished-at="2024-09-18T17:31:36 IST" duration-ms="4355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:31:36 IST" name="launchBrowser" finished-at="2024-09-18T17:31:46 IST" duration-ms="9178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="validateInvalidFileType()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:31:46 IST" name="validateInvalidFileType" finished-at="2024-09-18T17:32:00 IST" duration-ms="14059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateInvalidFileType -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:32:00 IST" name="tearDown" finished-at="2024-09-18T17:32:04 IST" duration-ms="4233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.orengeHRM.testcases.AddEmployeeTest@5386659f]" started-at="2024-09-18T17:32:05 IST" name="afterSuite" finished-at="2024-09-18T17:32:05 IST" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.orengeHRM.testcases.LoginTest -->
+      </class> <!-- com.orengeHRM.testcases.AddEmployeeTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
