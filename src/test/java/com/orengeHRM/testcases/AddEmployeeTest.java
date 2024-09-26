@@ -24,7 +24,7 @@ public class AddEmployeeTest extends BaseClass{
 	PIM_EmpAdd empadd;
 	
 	
-//	@Test
+	@Test(groups = {"All", "Smoke", "Regression"})
 	public void addEmpWithoutLoginDetails() throws IOException, InterruptedException {
 		
 		Log.startTestCase("addEmpWithoutLoginDetails");
@@ -66,7 +66,7 @@ public class AddEmployeeTest extends BaseClass{
 	}
 	
 	
-	@Test(dataProvider = "EnterEmployeeName", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "EnterEmployeeName", dataProviderClass = DataProviders.class, groups = {"All", "Regression"})
 	public void addEmpWithLoginDetails(String FName, String MName, String LName, String Name, String Pass, String CPass) throws IOException, InterruptedException {
 		
 		Log.startTestCase("addEmpWithLoginDetails");
@@ -84,14 +84,12 @@ public class AddEmployeeTest extends BaseClass{
 		empadd = emplist.employeeAddButton();
 		
 		Log.info("Entering employee full name");
-//		empadd.enterEmpFullName("Sam", "Joseph", "Landwood");
 		empadd.enterEmpFullName(FName, MName, LName);
 		
 		Log.info("Uploading employee profile photo");
 		empadd.addPhoto("C:/Users/Admin/selenium_practice/OrengeHRM/TestData/OrangeHRM_fileUpload.exe");
 		
 		Log.info("Switching Login details and entering details");
-//		empadd.loginDetails("pranu1", "abcd123", "abcd123");
 		empadd.loginDetails(Name, Pass, CPass);
 		
 		emplist=empadd.saveEmployee();		
@@ -122,7 +120,7 @@ public class AddEmployeeTest extends BaseClass{
 		Log.endTestCase("addEmpWithLoginDetails");
 	}
 	
-//	@Test
+	@Test(groups = "All")
 	public void cancelAddEmployee() throws InterruptedException {
 		
 		Log.startTestCase("cancelAddEmployee");
@@ -153,7 +151,7 @@ public class AddEmployeeTest extends BaseClass{
 	}
 	
 	
-//	@Test
+	@Test(groups = "All")
 	public void validateLargeFileValidation() throws IOException, InterruptedException {
 		
 		Log.info("validateLargeFileValidation");
@@ -184,7 +182,7 @@ public class AddEmployeeTest extends BaseClass{
 		Log.endTestCase("validateLargeFileValidation");
 	}
 	
-	@Test
+	@Test(groups = {"All", "Regression"})
 	public void validateInvalidFileType() throws IOException, InterruptedException {
 		
 		Log.startTestCase("validateInvalidFileType");

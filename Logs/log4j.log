@@ -305,3 +305,261 @@
 2024-09-18 17:31:59 INFO  Log:19 - Validating photo type
 2024-09-18 17:32:00 INFO  Log:15 - ----------validateInvalidFileType TEST END --------------
 2024-09-18 17:32:03 INFO  Log:19 - Browser is clossing
+2024-09-25 17:24:54 INFO  Log:19 - url entered in browser
+2024-09-25 17:25:10 INFO  Log:19 - url entered in browser
+2024-09-25 17:25:36 INFO  Log:19 - url entered in browser
+2024-09-25 17:29:10 WARN  OPCPackage:450 - Unable to call close() on a package that hasn't been fully opened yet
+2024-09-25 17:29:14 INFO  Log:19 - url entered in browser
+2024-09-25 17:29:20 INFO  Log:19 - url entered in browser
+2024-09-25 17:29:22 INFO  Log:11 - --------addEmpWithoutLoginDetails TEST START----------
+2024-09-25 17:29:22 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:29:34 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:29:36 INFO  Log:19 - Browser is clossing
+2024-09-25 17:29:41 INFO  Log:19 - url entered in browser
+2024-09-25 17:29:41 INFO  Log:19 - Browser is clossing
+2024-09-25 17:29:54 INFO  Log:19 - url entered in browser
+2024-09-25 17:30:02 INFO  Log:11 - --------countQuickLaunchOptions TEST START----------
+2024-09-25 17:30:02 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:30:06 INFO  Log:19 - Counting Quick Launch
+2024-09-25 17:30:07 INFO  Log:15 - ----------countQuickLaunchOptions TEST END --------------
+2024-09-25 17:30:11 INFO  Log:19 - Browser is clossing
+2024-09-25 17:30:15 INFO  Log:19 - url entered in browser
+2024-09-25 17:30:20 INFO  Log:11 - --------listQuickLaunchOptions TEST START----------
+2024-09-25 17:30:20 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:30:24 INFO  Log:19 - Showing Quick Launch List
+2024-09-25 17:30:26 INFO  Log:15 - ----------listQuickLaunchOptions TEST END --------------
+2024-09-25 17:30:29 INFO  Log:19 - Browser is clossing
+2024-09-25 17:30:33 INFO  Log:19 - url entered in browser
+2024-09-25 17:30:42 INFO  Log:11 - --------navigateToPIM TEST START----------
+2024-09-25 17:30:42 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:30:46 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:30:48 INFO  Log:19 - Verify systen navigate on Employee List page
+2024-09-25 17:30:48 INFO  Log:15 - ----------navigateToPIM TEST END --------------
+2024-09-25 17:30:51 INFO  Log:19 - Browser is clossing
+2024-09-25 17:30:55 INFO  Log:19 - url entered in browser
+2024-09-25 17:31:01 INFO  Log:11 - --------quickLaunchIconDisplay TEST START----------
+2024-09-25 17:31:01 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:31:05 INFO  Log:19 - Verifying Quick Launch Vailable or not
+2024-09-25 17:31:06 INFO  Log:15 - ----------quickLaunchIconDisplay TEST END --------------
+2024-09-25 17:31:09 INFO  Log:19 - Browser is clossing
+2024-09-25 17:31:13 INFO  Log:19 - url entered in browser
+2024-09-25 17:31:20 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-25 17:31:20 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:31:23 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:31:26 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-25 17:31:28 INFO  Log:19 - Entering employee full name
+2024-09-25 17:31:30 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:31:33 INFO  Log:19 - Switching Login details and entering details
+2024-09-25 17:31:36 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-25 17:31:39 INFO  Log:19 - Validate employee ID already exist or not
+2024-09-25 17:31:49 INFO  Log:15 - ----------addEmpWithLoginDetails TEST END --------------
+2024-09-25 17:31:52 INFO  Log:19 - Browser is clossing
+2024-09-25 17:31:57 INFO  Log:19 - url entered in browser
+2024-09-25 17:32:05 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-25 17:32:05 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:32:09 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:32:11 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-25 17:32:13 INFO  Log:19 - Entering employee full name
+2024-09-25 17:32:14 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:32:17 INFO  Log:19 - Switching Login details and entering details
+2024-09-25 17:32:20 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-25 17:32:33 INFO  Log:19 - Browser is clossing
+2024-09-25 17:32:37 INFO  Log:19 - url entered in browser
+2024-09-25 17:32:44 INFO  Log:11 - --------addEmpWithoutLoginDetails TEST START----------
+2024-09-25 17:32:44 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:32:47 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:32:49 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-25 17:32:51 INFO  Log:19 - Entering employee full name
+2024-09-25 17:32:53 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:32:58 INFO  Log:19 - Browser is clossing
+2024-09-25 17:33:02 INFO  Log:19 - url entered in browser
+2024-09-25 17:33:09 INFO  Log:11 - --------cancelAddEmployee TEST START----------
+2024-09-25 17:33:09 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:33:12 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:33:15 INFO  Log:19 - Clicking Add button to add employee
+2024-09-25 17:33:18 INFO  Log:19 - Clicking Cancel button to cancel add employee operation
+2024-09-25 17:33:19 INFO  Log:19 - Validating after cancel opration it redirected on Employee List page
+2024-09-25 17:33:19 INFO  Log:15 - ----------cancelAddEmployee TEST END --------------
+2024-09-25 17:33:22 INFO  Log:19 - Browser is clossing
+2024-09-25 17:33:26 INFO  Log:19 - url entered in browser
+2024-09-25 17:33:33 INFO  Log:11 - --------validateInvalidFileType TEST START----------
+2024-09-25 17:33:33 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:33:36 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:33:42 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:33:47 INFO  Log:19 - Validating photo type
+2024-09-25 17:33:47 INFO  Log:15 - ----------validateInvalidFileType TEST END --------------
+2024-09-25 17:33:50 INFO  Log:19 - Browser is clossing
+2024-09-25 17:33:54 INFO  Log:19 - url entered in browser
+2024-09-25 17:34:04 INFO  Log:19 - validateLargeFileValidation
+2024-09-25 17:34:04 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:34:08 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:34:14 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:34:19 INFO  Log:19 - Browser is clossing
+2024-09-25 17:34:24 INFO  Log:19 - url entered in browser
+2024-09-25 17:34:33 INFO  Log:11 - --------addEmployee TEST START----------
+2024-09-25 17:34:33 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:34:36 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:34:41 INFO  Log:15 - ----------addEmployee TEST END --------------
+2024-09-25 17:34:44 INFO  Log:19 - Browser is clossing
+2024-09-25 17:34:48 INFO  Log:19 - url entered in browser
+2024-09-25 17:34:54 INFO  Log:11 - --------editEmployee TEST START----------
+2024-09-25 17:34:54 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:34:58 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:35:09 INFO  Log:19 - Browser is clossing
+2024-09-25 17:35:12 INFO  Log:19 - url entered in browser
+2024-09-25 17:35:21 INFO  Log:11 - --------empSearchByStatus TEST START----------
+2024-09-25 17:35:21 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:35:24 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:35:30 INFO  Log:19 - Validating Entered selected option
+2024-09-25 17:35:30 INFO  Log:15 - ----------empSearchByStatus TEST END --------------
+2024-09-25 17:35:33 INFO  Log:19 - Browser is clossing
+2024-09-25 17:35:37 INFO  Log:19 - url entered in browser
+2024-09-25 17:35:45 INFO  Log:11 - --------verifyEmployeeDelete TEST START----------
+2024-09-25 17:35:45 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:35:48 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:36:00 INFO  Log:15 - ----------verifyEmployeeDelete TEST END --------------
+2024-09-25 17:36:03 INFO  Log:19 - Browser is clossing
+2024-09-25 17:36:07 INFO  Log:19 - url entered in browser
+2024-09-25 17:36:13 INFO  Log:11 - --------verifyNameInTable TEST START----------
+2024-09-25 17:36:13 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:36:17 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:36:23 INFO  Log:15 - ----------verifyNameInTable TEST END --------------
+2024-09-25 17:36:26 INFO  Log:19 - Browser is clossing
+2024-09-25 17:36:30 INFO  Log:19 - url entered in browser
+2024-09-25 17:36:39 INFO  Log:11 - --------verifyNoOfRowsEqualsTabMessage TEST START----------
+2024-09-25 17:36:39 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:36:41 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:36:45 INFO  Log:19 - Entering Employee Name
+2024-09-25 17:36:49 INFO  Log:19 - Extracting number from string
+2024-09-25 17:36:51 INFO  Log:15 - ----------verifyNoOfRowsEqualsTabMessage TEST END --------------
+2024-09-25 17:36:54 INFO  Log:19 - Browser is clossing
+2024-09-25 17:36:59 INFO  Log:19 - url entered in browser
+2024-09-25 17:37:07 INFO  Log:11 - --------verifyResetAll TEST START----------
+2024-09-25 17:37:07 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:37:11 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:37:13 INFO  Log:19 - User Name Enter
+2024-09-25 17:37:17 INFO  Log:19 - Clicking on Reset button
+2024-09-25 17:37:18 INFO  Log:19 - Verify Name field is clear
+2024-09-25 17:37:18 INFO  Log:15 - ----------verifyResetAll TEST END --------------
+2024-09-25 17:37:21 INFO  Log:19 - Browser is clossing
+2024-09-25 17:37:25 INFO  Log:19 - url entered in browser
+2024-09-25 17:37:33 INFO  Log:11 - --------verifyTableMsgSearchByID TEST START----------
+2024-09-25 17:37:33 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:37:36 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:37:40 INFO  Log:19 - Entering Employee ID
+2024-09-25 17:37:42 INFO  Log:19 - Validating Entered value present in field
+2024-09-25 17:37:42 INFO  Log:15 - ----------verifyTableMsgSearchByID TEST END --------------
+2024-09-25 17:37:45 INFO  Log:19 - Browser is clossing
+2024-09-25 17:37:49 INFO  Log:19 - url entered in browser
+2024-09-25 17:37:56 INFO  Log:11 - --------verifyTableMsgSearchByName TEST START----------
+2024-09-25 17:37:56 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:38:00 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:38:02 INFO  Log:19 - Enter data in Name field
+2024-09-25 17:38:03 INFO  Log:19 - Validate value present in Name field
+2024-09-25 17:38:05 INFO  Log:19 - Validating Table message
+2024-09-25 17:38:05 INFO  Log:15 - ----------verifyTableMsgSearchByName TEST END --------------
+2024-09-25 17:38:08 INFO  Log:19 - Browser is clossing
+2024-09-25 17:38:12 INFO  Log:19 - url entered in browser
+2024-09-25 17:38:18 INFO  Log:11 - --------forgotPassword TEST START----------
+2024-09-25 17:38:23 INFO  Log:19 - Clicking on Forgot Password Link
+2024-09-25 17:38:23 INFO  Log:19 - Verify forgot Link available or not
+2024-09-25 17:38:23 INFO  Log:15 - ----------forgotPassword TEST END --------------
+2024-09-25 17:38:26 INFO  Log:19 - Browser is clossing
+2024-09-25 17:38:31 INFO  Log:19 - url entered in browser
+2024-09-25 17:38:38 INFO  Log:11 - --------verifyLogin TEST START----------
+2024-09-25 17:38:41 INFO  Log:19 - User is entering login credentials
+2024-09-25 17:38:45 INFO  Log:19 - System get current URL
+2024-09-25 17:38:45 INFO  Log:19 - System compare expected and actual URL
+2024-09-25 17:38:45 INFO  Log:15 - ----------verifyLogin TEST END --------------
+2024-09-25 17:38:48 INFO  Log:19 - Browser is clossing
+2024-09-25 17:38:52 INFO  Log:19 - url entered in browser
+2024-09-25 17:38:59 INFO  Log:11 - --------verifyLogin TEST START----------
+2024-09-25 17:39:02 INFO  Log:19 - User is entering login credentials
+2024-09-25 17:39:03 INFO  Log:19 - System get current URL
+2024-09-25 17:39:05 INFO  Log:19 - System compare expected and actual URL
+2024-09-25 17:39:05 INFO  Log:15 - ----------verifyLogin TEST END --------------
+2024-09-25 17:39:08 INFO  Log:19 - Browser is clossing
+2024-09-25 17:39:13 INFO  Log:19 - url entered in browser
+2024-09-25 17:39:19 INFO  Log:11 - --------verifyLogin TEST START----------
+2024-09-25 17:39:22 INFO  Log:19 - User is entering login credentials
+2024-09-25 17:39:23 INFO  Log:19 - System get current URL
+2024-09-25 17:39:23 INFO  Log:19 - System compare expected and actual URL
+2024-09-25 17:39:46 INFO  Log:19 - Browser is clossing
+2024-09-25 17:39:50 INFO  Log:19 - url entered in browser
+2024-09-25 17:39:57 INFO  Log:11 - --------verifyResetPassword TEST START----------
+2024-09-25 17:40:02 INFO  Log:19 - Clicking on Forgot password link
+2024-09-25 17:40:03 INFO  Log:19 - Verify reset password page open
+2024-09-25 17:40:03 INFO  Log:15 - ----------verifyResetPassword TEST END --------------
+2024-09-25 17:40:06 INFO  Log:19 - Browser is clossing
+2024-09-25 17:47:16 INFO  Log:19 - url entered in browser
+2024-09-25 17:47:21 INFO  Log:11 - --------countQuickLaunchOptions TEST START----------
+2024-09-25 17:47:22 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:47:25 INFO  Log:19 - Counting Quick Launch
+2024-09-25 17:47:27 INFO  Log:15 - ----------countQuickLaunchOptions TEST END --------------
+2024-09-25 17:47:31 INFO  Log:19 - url entered in browser
+2024-09-25 17:47:52 INFO  Log:11 - --------quickLaunchIconDisplay TEST START----------
+2024-09-25 17:47:52 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:47:56 INFO  Log:19 - Verifying Quick Launch Vailable or not
+2024-09-25 17:47:57 INFO  Log:15 - ----------quickLaunchIconDisplay TEST END --------------
+2024-09-25 17:48:06 INFO  Log:19 - url entered in browser
+2024-09-25 17:48:13 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-25 17:48:13 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:48:17 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:48:20 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-25 17:48:22 INFO  Log:19 - Entering employee full name
+2024-09-25 17:48:24 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:48:27 INFO  Log:19 - Switching Login details and entering details
+2024-09-25 17:48:30 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-25 17:48:33 INFO  Log:19 - Validate employee ID already exist or not
+2024-09-25 17:48:44 INFO  Log:15 - ----------addEmpWithLoginDetails TEST END --------------
+2024-09-25 17:48:47 INFO  Log:19 - url entered in browser
+2024-09-25 17:48:57 INFO  Log:11 - --------addEmpWithLoginDetails TEST START----------
+2024-09-25 17:48:57 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:49:01 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:49:05 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-25 17:49:08 INFO  Log:19 - Entering employee full name
+2024-09-25 17:49:11 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:49:13 INFO  Log:19 - Switching Login details and entering details
+2024-09-25 17:49:16 INFO  Log:19 - Verify success message to confirm employee added
+2024-09-25 17:49:31 INFO  Log:19 - url entered in browser
+2024-09-25 17:49:41 INFO  Log:11 - --------addEmpWithoutLoginDetails TEST START----------
+2024-09-25 17:49:41 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:49:47 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:49:50 INFO  Log:19 - Clicking on Add button to add new employee
+2024-09-25 17:49:52 INFO  Log:19 - Entering employee full name
+2024-09-25 17:49:54 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:50:01 INFO  Log:19 - url entered in browser
+2024-09-25 17:50:09 INFO  Log:11 - --------validateInvalidFileType TEST START----------
+2024-09-25 17:50:09 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:50:13 INFO  Log:19 - User Navigating on PIM page
+2024-09-25 17:50:20 INFO  Log:19 - Uploading employee profile photo
+2024-09-25 17:50:25 INFO  Log:19 - Validating photo type
+2024-09-25 17:50:25 INFO  Log:15 - ----------validateInvalidFileType TEST END --------------
+2024-09-25 17:50:29 INFO  Log:19 - url entered in browser
+2024-09-25 17:50:57 INFO  Log:11 - --------editEmployee TEST START----------
+2024-09-25 17:50:57 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:51:04 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:51:21 INFO  Log:19 - url entered in browser
+2024-09-25 17:51:50 INFO  Log:11 - --------verifyNoOfRowsEqualsTabMessage TEST START----------
+2024-09-25 17:51:50 INFO  Log:19 - User entering credentials to login
+2024-09-25 17:51:53 INFO  Log:19 - Navigate on PIM page
+2024-09-25 17:51:57 INFO  Log:19 - Entering Employee Name
+2024-09-25 17:52:00 INFO  Log:19 - Extracting number from string
+2024-09-25 17:52:02 INFO  Log:15 - ----------verifyNoOfRowsEqualsTabMessage TEST END --------------
+2024-09-25 17:52:09 INFO  Log:19 - url entered in browser
+2024-09-25 17:52:21 INFO  Log:11 - --------verifyLogin TEST START----------
+2024-09-25 17:52:24 INFO  Log:19 - User is entering login credentials
+2024-09-25 17:52:27 INFO  Log:19 - System get current URL
+2024-09-25 17:52:27 INFO  Log:19 - System compare expected and actual URL
+2024-09-25 17:52:27 INFO  Log:15 - ----------verifyLogin TEST END --------------
+2024-09-25 17:52:34 INFO  Log:19 - url entered in browser
+2024-09-25 17:52:45 INFO  Log:11 - --------verifyLogin TEST START----------
+2024-09-25 17:52:48 INFO  Log:19 - User is entering login credentials
+2024-09-25 17:52:53 INFO  Log:19 - System get current URL
+2024-09-25 17:52:53 INFO  Log:19 - System compare expected and actual URL
+2024-09-25 17:52:53 INFO  Log:15 - ----------verifyLogin TEST END --------------
+2024-09-25 17:52:59 INFO  Log:19 - url entered in browser
+2024-09-25 17:53:08 INFO  Log:11 - --------verifyLogin TEST START----------
+2024-09-25 17:53:12 INFO  Log:19 - User is entering login credentials
+2024-09-25 17:53:13 INFO  Log:19 - System get current URL
+2024-09-25 17:53:13 INFO  Log:19 - System compare expected and actual URL

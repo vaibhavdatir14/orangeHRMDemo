@@ -25,7 +25,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static Logger logger;
 
-	@BeforeSuite
+	@BeforeSuite(groups = {"All", "Smoke", "Regression"})
 	public void loadConfig() {
 
 		ExtentManager.setExtent();
@@ -44,11 +44,12 @@ public class BaseClass {
 		}
 	}
 
-	@BeforeMethod
-	public static void launchBrowser() throws InterruptedException {
+	@Parameters("browser")
+	@BeforeMethod(groups = {"All", "Smoke", "Regression"})
+	public static void launchBrowser(String browserName) throws InterruptedException {
 
 		WebDriverManager.chromedriver().setup();
-		String browserName = prop.getProperty("browser");
+//		String browserName = prop.getProperty("browser");		//We use @Parameter to read from properties file
 
 		if (browserName.contains("Chrome")) {
 			driver = new ChromeDriver();

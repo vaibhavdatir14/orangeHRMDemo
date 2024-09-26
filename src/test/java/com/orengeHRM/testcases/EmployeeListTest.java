@@ -19,7 +19,7 @@ public class EmployeeListTest extends BaseClass {
 	PIM_EmpAdd empadd;
 	
 
-//	@Test
+	@Test(groups = "All")
 	public void verifyResetAll() throws InterruptedException {
 
 		Log.startTestCase("verifyResetAll");
@@ -60,7 +60,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("verifyResetAll");
 	}
 
-//	@Test
+	@Test(groups = "All")
 	public void verifyTableMsgSearchByName() throws InterruptedException {
 
 		Log.startTestCase("verifyTableMsgSearchByName");
@@ -113,7 +113,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("verifyTableMsgSearchByName");
 	}
 
-//	@Test
+	@Test(groups = "All")
 	public void verifyTableMsgSearchByID() throws InterruptedException {
 
 		Log.startTestCase("verifyTableMsgSearchByID");
@@ -157,7 +157,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("verifyTableMsgSearchByID");
 	}
 
-	@Test
+	@Test(groups = "All")
 	public void empSearchByStatus() throws InterruptedException {
 
 		Log.startTestCase("empSearchByStatus");
@@ -199,7 +199,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("empSearchByStatus");
 	}
 
-//	@Test
+	@Test(groups = {"All","Regression"})
 	public void verifyNoOfRowsEqualsTabMessage() throws InterruptedException {
 
 		Log.startTestCase("verifyNoOfRowsEqualsTabMessage");
@@ -244,7 +244,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("verifyNoOfRowsEqualsTabMessage");
 	}
 
-//	@Test
+	@Test(groups = "All")
 	public void verifyNameInTable() throws InterruptedException {
 
 		Log.startTestCase("verifyNameInTable");
@@ -286,7 +286,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("verifyNameInTable");
 	}
 
-//	@Test
+	@Test(groups = "All")
 	public void verifyEmployeeDelete() throws InterruptedException {
 
 		Log.startTestCase("verifyEmployeeDelete");
@@ -332,7 +332,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.endTestCase("verifyEmployeeDelete");
 	}
 
-	@Test
+	@Test(groups = {"All", "Smoke", "Regression"})
 	public void editEmployee() throws InterruptedException {
 
 		Log.startTestCase("editEmployee");
@@ -380,7 +380,7 @@ public class EmployeeListTest extends BaseClass {
 		Log.startTestCase("editEmployee");
 	}
 
-	@Test
+	@Test(groups = "All")
 	public void addEmployeeButton() throws InterruptedException {
 		
 		Log.startTestCase("addEmployee");

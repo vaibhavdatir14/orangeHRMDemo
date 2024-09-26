@@ -15,7 +15,7 @@ public class DashboardTest extends BaseClass {
 	Dashboard dashboard;
 	PIM_EmpList pimEmpList;
 
-//	@Test
+	@Test(groups = {"All", "Regression"})
 	public void quickLaunchIconDisplay() {
 		
 		Log.startTestCase("quickLaunchIconDisplay");
@@ -33,7 +33,7 @@ public class DashboardTest extends BaseClass {
 		Log.endTestCase("quickLaunchIconDisplay");
 	}
 
-//	@Test
+	@Test(groups = {"All", "Regression"})
 	public void countQuickLaunchOptions() {
 
 		Log.startTestCase("countQuickLaunchOptions");
@@ -50,7 +50,7 @@ public class DashboardTest extends BaseClass {
 		Log.endTestCase("countQuickLaunchOptions");
 	}
 
-//	@Test
+	@Test(groups = "All")
 	public void listQuickLaunchOptions() {
 
 		Log.startTestCase("listQuickLaunchOptions");
@@ -66,7 +66,7 @@ public class DashboardTest extends BaseClass {
 		Log.endTestCase("listQuickLaunchOptions");
 	}
 	
-	@Test
+	@Test(groups = {"All", "Smoke"})
 	public void navigateToPIM() {
 
 		Log.startTestCase("navigateToPIM");

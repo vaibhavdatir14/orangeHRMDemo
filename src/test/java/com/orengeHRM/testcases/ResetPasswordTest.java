@@ -14,7 +14,7 @@ public class ResetPasswordTest extends BaseClass{
 	ResetPassword resetpass;
 	
 	
-	@Test
+	@Test(groups = {"All"})
 	public void cancelResetPass() {
 		
 		login = new Login();
@@ -30,7 +30,7 @@ public class ResetPasswordTest extends BaseClass{
 		
 	}
 	
-	@Test
+	@Test(groups = "All")
 	public void verifyResetPassPage() {
 		login = new Login();
 		resetpass= new ResetPassword();

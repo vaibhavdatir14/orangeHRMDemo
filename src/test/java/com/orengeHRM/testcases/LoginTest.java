@@ -16,7 +16,7 @@ public class LoginTest extends BaseClass {
 
 	// Reference to read dataprovider from DataProvider class
 
-	@Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class, groups = {"All", "Smoke", "Regression"})
 	public void verifyLogin(String uname, String pswd) throws InterruptedException {
 
 		Log.startTestCase("verifyLogin");
@@ -60,7 +60,7 @@ public class LoginTest extends BaseClass {
 	}
 
 	
-//	@Test
+	@Test(groups = {"All", "Smoke"})
 	public void forgotPassword() throws InterruptedException {
 
 		Log.startTestCase("forgotPassword");
@@ -76,7 +76,7 @@ public class LoginTest extends BaseClass {
 		Log.endTestCase("forgotPassword");
 	}
 
-//	@Test
+	@Test(groups = "All")
 	public void verifyResetPassword() throws InterruptedException {
 
 		Log.startTestCase("verifyResetPassword");

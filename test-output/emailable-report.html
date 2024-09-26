@@ -9,18 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">117,583</td><td></td><td></td></tr>
+<tr><td><a href="#t0">RegressionTest</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">385,647</td><td>Regression</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.orengeHRM.testcases.AddEmployeeTest</td><td><a href="#m0">addEmpWithLoginDetails</a></td><td rowspan="2">1726660824830</td><td rowspan="2">24487</td></tr><tr class="failedeven"><td><a href="#m1">addEmpWithLoginDetails</a></td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.orengeHRM.testcases.AddEmployeeTest</td><td><a href="#m2">validateInvalidFileType</a></td><td rowspan="1">1726660906091</td><td rowspan="1">14059</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RegressionTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.orengeHRM.testcases.AddEmployeeTest</td><td><a href="#m0">addEmpWithLoginDetails</a></td><td rowspan="1">1727266737017</td><td rowspan="1">29921</td></tr><tr class="failedeven"><td><a href="#m1">addEmpWithoutLoginDetails</a></td><td rowspan="1">1727266781983</td><td rowspan="1">14743</td></tr><tr class="failedodd"><td rowspan="1">com.orengeHRM.testcases.EmployeeListTest</td><td><a href="#m2">editEmployee</a></td><td rowspan="1">1727266857537</td><td rowspan="1">19620</td></tr><tr class="failedeven"><td rowspan="1">com.orengeHRM.testcases.LoginTest</td><td><a href="#m3">verifyLogin</a></td><td rowspan="1">1727266988996</td><td rowspan="1">24516</td></tr><tr><th colspan="4">RegressionTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.orengeHRM.testcases.AddEmployeeTest</td><td><a href="#m4">addEmpWithLoginDetails</a></td><td rowspan="1">1727266693911</td><td rowspan="1">30482</td></tr><tr class="passedeven"><td><a href="#m5">validateInvalidFileType</a></td><td rowspan="1">1727266809329</td><td rowspan="1">15930</td></tr><tr class="passedodd"><td rowspan="2">com.orengeHRM.testcases.DashboardTest</td><td><a href="#m6">countQuickLaunchOptions</a></td><td rowspan="1">1727266641968</td><td rowspan="1">6024</td></tr><tr class="passedodd"><td><a href="#m7">quickLaunchIconDisplay</a></td><td rowspan="1">1727266672331</td><td rowspan="1">4802</td></tr><tr class="passedeven"><td rowspan="1">com.orengeHRM.testcases.EmployeeListTest</td><td><a href="#m8">verifyNoOfRowsEqualsTabMessage</a></td><td rowspan="1">1727266910028</td><td rowspan="1">12448</td></tr><tr class="passedodd"><td rowspan="2">com.orengeHRM.testcases.LoginTest</td><td><a href="#m9">verifyLogin</a></td><td rowspan="2">1727266965874</td><td rowspan="2">7904</td></tr><tr class="passedodd"><td><a href="#m10">verifyLogin</a></td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.orengeHRM.testcases.AddEmployeeTest#addEmpWithLoginDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>Sam</td><td>Joseph</td><td>Peter</td><td>Johnalec</td><td>abcd12@q</td><td>abcd12@q</td></tr><tr><th colspan="6">Exception</th></tr><tr><td colspan="6"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;oxd-toast-content oxd-toast-content--success&apos;]&quot;}
-  (Session info: chrome=128.0.6613.138)
+<h2>RegressionTest</h2><h3 id="m0">com.orengeHRM.testcases.AddEmployeeTest#addEmpWithLoginDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>Joseph</td><td>Vaibhav</td><td>Phillip</td><td>Johnalec</td><td>jjkl1234</td><td>jjkl1234</td></tr><tr><th colspan="6">Exception</th></tr><tr><td colspan="6"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;oxd-toast-content oxd-toast-content--success&apos;]&quot;}
+  (Session info: chrome=129.0.6668.59)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;VAIBHAV&apos;, ip: &apos;192.168.202.99&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+System info: host: &apos;VAIBHAV&apos;, ip: &apos;192.168.93.99&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52269}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 84ce497edb9bebd123ca3e6a6fb4bdcd
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8cc9c15ca68b969f61bc6aba86378539
 *** Element info: {Using=xpath, value=//*[@class=&apos;oxd-toast-content oxd-toast-content--success&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -36,18 +36,38 @@ Session ID: 84ce497edb9bebd123ca3e6a6fb4bdcd
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy31.isDisplayed(Unknown Source)
 	at com.orengeHRM.pageobject.PIM_EmpAdd.toasterSuccessMessage(PIM_EmpAdd.java:130)
-	at com.orengeHRM.testcases.AddEmployeeTest.addEmpWithLoginDetails(AddEmployeeTest.java:100)
+	at com.orengeHRM.testcases.AddEmployeeTest.addEmpWithLoginDetails(AddEmployeeTest.java:98)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.orengeHRM.testcases.AddEmployeeTest#addEmpWithLoginDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>Joseph</td><td>Vaibhav</td><td>Phillip</td><td>Johnalec</td><td>jjkl1234</td><td>jjkl1234</td></tr><tr><th colspan="6">Exception</th></tr><tr><td colspan="6"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;oxd-toast-content oxd-toast-content--success&apos;]&quot;}
-  (Session info: chrome=128.0.6613.138)
+<h3 id="m1">com.orengeHRM.testcases.AddEmployeeTest#addEmpWithoutLoginDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.IOException: Cannot run program &quot;/OrengeHRM/TestData/OrangeHRM_fileUpload.exe&quot;: CreateProcess error=2, The system cannot find the file specified
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+	at java.base/java.lang.Runtime.exec(Runtime.java:594)
+	at java.base/java.lang.Runtime.exec(Runtime.java:418)
+	at java.base/java.lang.Runtime.exec(Runtime.java:315)
+	at com.orengeHRM.pageobject.PIM_EmpAdd.addPhoto(PIM_EmpAdd.java:110)
+	at com.orengeHRM.testcases.AddEmployeeTest.addEmpWithoutLoginDetails(AddEmployeeTest.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:499)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:158)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+	... 34 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.orengeHRM.testcases.EmployeeListTest#editEmployee</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Edit Page not Open expected [null] but found [Personal Details]
+	at com.orengeHRM.testcases.EmployeeListTest.editEmployee(EmployeeListTest.java:369)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.orengeHRM.testcases.LoginTest#verifyLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>vaibhav</td><td>  </td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains (.,&apos;Invalid credentials&apos;)]&quot;}
+  (Session info: chrome=129.0.6668.59)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;VAIBHAV&apos;, ip: &apos;192.168.202.99&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+System info: host: &apos;VAIBHAV&apos;, ip: &apos;192.168.93.99&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52291}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4141f77fcf83fea9f346f7c8dbf497f0
-*** Element info: {Using=xpath, value=//*[@class=&apos;oxd-toast-content oxd-toast-content--success&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53259}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 073537e33a3ca82a63dbe1d51d9c24a4
+*** Element info: {Using=xpath, value=//p[contains (.,&apos;Invalid credentials&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -60,11 +80,17 @@ Session ID: 4141f77fcf83fea9f346f7c8dbf497f0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy31.isDisplayed(Unknown Source)
-	at com.orengeHRM.pageobject.PIM_EmpAdd.toasterSuccessMessage(PIM_EmpAdd.java:130)
-	at com.orengeHRM.testcases.AddEmployeeTest.addEmpWithLoginDetails(AddEmployeeTest.java:100)
+	at jdk.proxy2/jdk.proxy2.$Proxy31.getText(Unknown Source)
+	at com.orengeHRM.pageobject.Login.invalidLogin(Login.java:60)
+	at com.orengeHRM.testcases.LoginTest.verifyLogin(LoginTest.java:47)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.orengeHRM.testcases.AddEmployeeTest#validateInvalidFileType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.orengeHRM.testcases.AddEmployeeTest#addEmpWithLoginDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>Sam</td><td>Joseph</td><td>Peter</td><td>Johnalec</td><td>abcd12@q</td><td>abcd12@q</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.orengeHRM.testcases.AddEmployeeTest#validateInvalidFileType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.orengeHRM.testcases.DashboardTest#countQuickLaunchOptions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.orengeHRM.testcases.DashboardTest#quickLaunchIconDisplay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.orengeHRM.testcases.EmployeeListTest#verifyNoOfRowsEqualsTabMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.orengeHRM.testcases.LoginTest#verifyLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>vai898</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.orengeHRM.testcases.LoginTest#verifyLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Admin</td><td>admin123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

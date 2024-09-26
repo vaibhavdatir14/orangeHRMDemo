@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.orengeHRM.utility.ExtentListner.java"></listener>
+	</listeners>
+  <test thread-count="5" name="RegressionTest">
+	  <parameter name="browser" value="Chrome"></parameter>
+	 	<groups>
+		  <run> 
+			  <include name="Regression"></include>
+			  
+		  </run>
+		</groups>
+    <classes>
+      <class name="com.orengeHRM.testcases.ResetPasswordTest"/>
+      <class name="com.orengeHRM.testcases.DashboardTest"/>
+      <class name="com.orengeHRM.testcases.AddEmployeeTest"/>
+      <class name="com.orengeHRM.testcases.EmployeeListTest"/>
+      <class name="com.orengeHRM.testcases.LoginTest"/>
+    </classes>
+  </test> <!-- RegressionTest -->
+</suite> <!-- Suite -->
